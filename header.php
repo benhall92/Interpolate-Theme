@@ -41,7 +41,7 @@
 
 		<div class="nav pull-right header-cta">
           <button type="button" class="btn btn-primary navbar-btn">
-            <span class="glyphicon glyphicon-plus"></span> 
+            <span class="fa fa-phone"></span> 
             Call
           </button>
         </div>
