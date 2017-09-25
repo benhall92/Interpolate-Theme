@@ -129,3 +129,5 @@ include 'inc/functions/register-sidebars.php';
 include 'inc/functions/enqueue-scripts.php';
 include 'inc/functions/page-options.php';
 include 'inc/functions/breadcrumbs.php';
+
+require_once (dirname(__FILE__) . '/inc/options/theme-config.php');

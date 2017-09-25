@@ -29,13 +29,15 @@
 
 	  	<div class="my-2 my-lg-0">
 
-			<form class="form-inline ">
+			<!--<form class="form-inline ">
 				
 				<input class="form-control mr-sm-2" type="text" placeholder="Search">
 				
 				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 
-			</form>
+			</form>-->
+
+			<?php get_search_form(); ?>
 
 		</div>
 
