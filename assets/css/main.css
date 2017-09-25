@@ -1,0 +1,262 @@
+/**
+ * Custom styles are added.
+ *
+ * Here we are overriding the BootStrap theme to create our own theme.
+ *
+ * Default WordPress Styles are also added here.
+ * 
+ * We have added Default styling for Widgets.
+ **/
+
+
+/*------------------------------------*\
+	$HEADER
+\*------------------------------------*/
+
+.breadcrumb{
+	text-align: right;
+	background-color: transparent;
+}
+
+	.breadcrumb .breadcrumb-item{
+		float: none;
+		display: inline-block;
+		zoom: 1;
+		*display: inline;
+	}
+
+.page-header{
+	padding: 30px 0;
+}
+
+	.page-header h1,
+	.page-header .breadcrumb{
+		margin-bottom: 0;
+	}
+
+
+/*------------------------------------*\
+	$FOOTER
+\*------------------------------------*/
+
+.copyright{
+	text-align: center;
+	padding: .7rem 0;
+}
+
+
+/*------------------------------------*\
+	$NAVIGATION
+\*------------------------------------*/
+
+.navbar{
+
+}
+ 
+	.navbar .header-cta{
+		margin: 0 0 0 10px;
+	}
+
+
+
+/*------------------------------------*\
+	$POST
+\*------------------------------------*/
+
+.post-featured-image{
+	
+}
+
+	.post-featured-image img{
+		width: 100%;
+		height: auto;
+	}
+
+
+
+/*------------------------------------*\
+	$WIDGETS
+\*------------------------------------*/
+
+.widgettitle{
+	margin-top: .5rem;
+}
+
+.widget{
+	margin-bottom: 2rem;
+}
+
+.widget.widget_pages > ul,
+.widget.widget_archive > ul,
+.widget.widget_recent_entries > ul,
+.widget.widget_categories > ul,
+.widget.widget_recent_comments > ul,
+.woocommerce.widget_product_categories ul{
+	display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+	.widget.widget_pages > ul > li,
+	.widget.widget_archive > ul > li,
+	.widget.widget_recent_entries > ul > li,
+	.widget.widget_categories > ul > li,
+	.widget.widget_recent_comments > ul > li,
+	.woocommerce.widget_product_categories > ul > li {
+		position: relative;
+	    display: block;
+	    padding: .75rem 1.25rem;
+	    margin-bottom: -1px;
+	    background-color: #fff;
+	    border: 1px solid rgba(0,0,0,.125);
+	}
+
+		.widget.widget_pages > ul > li:first-child,
+		.widget.widget_archive > ul > li:first-child,
+		.widget.widget_recent_entries > ul > li:first-child,
+		.widget.widget_categories > ul > li:first-child,
+		.widget.widget_recent_comments > ul > li:first-child,
+		.woocommerce.widget_product_categories > ul > li:first-child {
+		    border-top-left-radius: .25rem;
+		    border-top-right-radius: .25rem;
+		}
+
+		.widget.widget_pages > ul > li:last-child,
+		.widget.widget_archive > ul > li:last-child,
+		.widget.widget_recent_entries > ul > li:last-child,
+		.widget.widget_categories > ul > li:last-child,
+		.widget.widget_recent_comments > ul > li:last-child,
+		.woocommerce.widget_product_categories > ul > li:last-child {
+			margin-bottom: 0;
+		    border-bottom-right-radius: .25rem;
+		    border-bottom-left-radius: .25rem;
+		}
+
+			.widget.widget_pages > ul > li .children,
+			.widget.widget_archive > ul > li .children,
+			.widget.widget_recent_entries > ul > li .children,
+			.widget.widget_categories > ul > li .children,
+			.widget.widget_recent_comments > ul > li .children,
+			.woocommerce.widget_product_categories > ul > li .children {
+				margin: .75rem 0 0 1.25rem;
+			}
+
+.widget.widget_calendar .calendar_wrap{
+	padding: .75em;
+	border-radius: .25rem;
+	border: 1px solid rgba(0,0,0,.125);
+}
+
+.widget.widget_calendar #wp-calendar{
+	width: 100%;
+}
+
+.widget.widget_calendar #wp-calendar td,
+.widget.widget_calendar #wp-calendar th{
+	text-align: center;
+	padding: 2px;
+}
+
+.widget.widget_calendar #wp-calendar td#today{
+	background-color: rgba(0,0,0,.125);
+	color: #FFF;
+}
+
+.widget.widget_calendar #wp-calendar tfoot{
+
+}
+
+.widget.widget_tag_cloud .tagcloud a{
+	display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    color: #fff;
+    background-color: #007bff;
+}
+
+
+
+/*------------------------------------*\
+	$COMMENTS
+\*------------------------------------*/
+
+.comments{
+	margin-top: 2rem;
+}
+
+.comments .comment {
+	padding: .75rem 1.25rem;
+	background-color: #f9f9f9;
+}
+
+	.comments > ul > .comment .comment-body {
+
+	}
+
+	.comments > ul > .comment .comment-body .comment-author {
+		margin-bottom: .75rem;
+	}
+
+	.comments .comment .comment-body .comment-meta {
+		padding: 0.5rem 0;
+	    margin-bottom: 0.75rem;
+	    border-top: 1px solid #CCC;
+	    border-bottom: 1px solid #CCC;
+	}
+
+	.comments .children {
+		margin-left: 1rem;
+		margin-top: 2rem;
+	}
+
+		.comments .children .comment {
+			margin-bottom: 0.75rem;
+			border-bottom: none;
+		}
+
+.comment-form {
+
+}
+	.comment-form label {
+		display: block;
+	}
+
+	.comment-form textarea {
+		display: block;
+		width: 100%;
+		resize: none;
+		padding: .75em;
+		border-radius: .25rem;
+		border: 1px solid rgba(0,0,0,.125);
+	}
+
+	.comment-form .submit{
+		display: inline-block;
+		font-weight: 400;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: middle;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		border: 1px solid transparent;
+		padding: .5rem .75rem;
+		font-size: 1rem;
+		line-height: 1.25;
+		border-radius: .25rem;
+		transition: all .15s ease-in-out;
+		color: #fff;
+	    background-color: #007bff;
+	    border-color: #007bff;
+	}
