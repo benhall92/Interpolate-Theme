@@ -1,9 +1,10 @@
 # Interpolate-Theme
 This is a WordPress theme that has been created using Twitter's Bootstrap and Blank Slate.
 
-It comes packaged with Redux for WordPress.
+It comes packaged with Redux for WordPress to offer extensive customisability. To customise the theme go to "Theme Options".
+- Redux must be enable once the theme has been installed.
 
-The theme offers extensive Theme Customisation options via Theme Settings.
+This theme was created to provide a solid base for developers to rapidly create bespoke WordPress themes. Please feel free to use it as you see fit.
 
 Users can:
 
@@ -19,6 +20,6 @@ Users can:
 - Change the layout of the Archive Pages
 - Add content to the 404 Page
 - Change the layout of the Search Page
-- Customize the look and appearance of the sites buttons
+- Customise the look and appearance of the sites buttons
 - Add Widgets to the Footer
-- Upload custom CSS and JS to customize the theme
+- Upload custom CSS and JS to customise the theme
