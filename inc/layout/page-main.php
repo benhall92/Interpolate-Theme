@@ -1,9 +1,16 @@
-<?php get_template_part('inc/layout/page-main-css'); ?>
+<?php get_template_part('inc/layout/page-main-css');
 
-<?php
-$page_layout 		= get_post_meta(get_the_id(), '_page_layout', true);
-$show_sidebar 		= get_post_meta(get_the_id(), '_show_sidebar', true);
-$sidebar_position 	= get_post_meta(get_the_id(), '_sidebar_position', true); ?>
+$post_id = '';
+
+if( is_home() ):
+	$post_id = get_option( 'page_for_posts' );
+else:
+	$post_id = get_the_id();
+endif;
+
+$page_layout 		= get_post_meta($post_id, '_page_layout', true);
+$show_sidebar 		= get_post_meta($post_id, '_show_sidebar', true);
+$sidebar_position 	= get_post_meta($post_id, '_sidebar_position', true); ?>
 
 <main class="page-main">
 

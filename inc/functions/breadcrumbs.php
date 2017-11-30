@@ -25,7 +25,7 @@ function inter_breadcrumbs() {
            
         if ( is_archive() && !is_tax() && !is_category() && !is_tag() ) {
               
-            echo '<li class="item-current breadcrumb-item">'. post_type_archive_title($prefix, false) . '</li>';
+            echo '<li class="item-current breadcrumb-item">'. post_type_archive_title(false) . '</li>';
               
         } else if ( is_archive() && is_tax() && !is_category() && !is_tag() ) {
               
@@ -195,17 +195,17 @@ function inter_breadcrumbs() {
             $userdata = get_userdata( $author );
                
             // Display author name
-            echo '<li class="item-current item-current-' . $userdata->user_nicename . '">' . 'Author: ' . $userdata->display_name . '</li>';
+            echo '<li class="breadcrumb-item item-current item-current-' . $userdata->user_nicename . '">' . 'Author: ' . $userdata->display_name . '</li>';
            
         } else if ( get_query_var('paged') ) {
                
             // Paginated archives
-            echo '<li class="item-current item-current-' . get_query_var('paged') . '">'.__('Page') . ' ' . get_query_var('paged') . '</li>';
+            echo '<li class="breadcrumb-item item-current item-current-' . get_query_var('paged') . '">'.__('Page') . ' ' . get_query_var('paged') . '</li>';
                
         } else if ( is_search() ) {
            
             // Search results page
-            echo '<li class="item-current item-current-' . get_search_query() . '">Search results for: ' . get_search_query() . '</li>';
+            echo '<li class="breadcrumb-item item-current item-current-' . get_search_query() . '">Search results for: ' . get_search_query() . '</li>';
            
         } elseif ( is_404() ) {
                

@@ -1,7 +1,19 @@
 <?php
 
-$bottom_padding = get_post_meta(get_the_id(), '_bottom_padding', true);
-$top_padding 	= get_post_meta(get_the_id(), '_top_padding', true); ?>
+$post_id = '';
+
+if( is_home() ):
+
+	$post_id = get_option( 'page_for_posts' );
+
+else:
+
+	$post_id = get_the_id();
+
+endif;
+
+$bottom_padding = get_post_meta($post_id, '_bottom_padding', true);
+$top_padding 	= get_post_meta($post_id, '_top_padding', true); ?>
 
 <style type="text/css">
 	

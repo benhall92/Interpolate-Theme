@@ -1,9 +1,16 @@
 <?php
 
-add_action( 'after_setup_theme', 'blankslate_setup' );
+if ( !class_exists( 'ReduxFramework' ) && file_exists( dirname( __FILE__ ) . '/ReduxFramework/ReduxCore/framework.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/ReduxFramework/ReduxCore/framework.php' );
+}
+if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/inc/options/theme-config.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/inc/options/theme-config.php' );
+}
 
-function blankslate_setup() {
-	load_theme_textdomain( 'blankslate', get_template_directory() . '/languages' );
+add_action( 'after_setup_theme', 'inter_theme_setup' );
+
+function inter_theme_setup() {
+	load_theme_textdomain( 'inter_theme', get_template_directory() . '/languages' );
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
@@ -12,21 +19,21 @@ function blankslate_setup() {
 	if ( ! isset( $content_width ) ) $content_width = 640;
 	register_nav_menus(
 		array(
-			'main-menu' => __( 'Main Menu', 'blankslate' )
+			'main-menu' => __( 'Main Menu', 'inter_theme' )
 		)
 	);
 }
 
-add_action( 'comment_form_before', 'blankslate_enqueue_comment_reply_script' );
+add_action( 'comment_form_before', 'inter_theme_enqueue_comment_reply_script' );
 
-function blankslate_enqueue_comment_reply_script() {
+function inter_theme_enqueue_comment_reply_script() {
 	
 	if ( get_option( 'thread_comments' ) ) { wp_enqueue_script( 'comment-reply' ); }
 }
 
-add_filter( 'the_title', 'blankslate_title' );
+add_filter( 'the_title', 'inter_theme_title' );
 
-function blankslate_title( $title ) {
+function inter_theme_title( $title ) {
 	
 	if ( $title == '' ) {
 		return '&rarr;';
@@ -35,18 +42,18 @@ function blankslate_title( $title ) {
 	}
 }
 
-add_filter( 'wp_title', 'blankslate_filter_wp_title' );
+add_filter( 'wp_title', 'inter_theme_filter_wp_title' );
 
-function blankslate_filter_wp_title( $title ) {
+function inter_theme_filter_wp_title( $title ) {
 	return $title . esc_attr( get_bloginfo( 'name' ) );
 }
 
-add_action( 'widgets_init', 'blankslate_widgets_init' );
+add_action( 'widgets_init', 'inter_theme_widgets_init' );
 
-function blankslate_widgets_init() {
+function inter_theme_widgets_init() {
 
 	register_sidebar( array (
-		'name' => __( 'Sidebar Widget Area', 'blankslate' ),
+		'name' => __( 'Sidebar Widget Area', 'inter_theme' ),
 		'id' => 'primary-widget-area',
 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 		'after_widget' => "</li>",
@@ -56,7 +63,7 @@ function blankslate_widgets_init() {
 	);
 }
 
-function blankslate_custom_pings( $comment ) {
+function inter_theme_custom_pings( $comment ) {
 
 	$GLOBALS['comment'] = $comment;
 	?>
@@ -125,9 +132,25 @@ function inter_add_menu_link_class( $atts, $item, $args ) {
     return $atts;
 }
 
-include 'inc/functions/register-sidebars.php';
-include 'inc/functions/enqueue-scripts.php';
-include 'inc/functions/page-options.php';
-include 'inc/functions/breadcrumbs.php';
+/**
+ * Remove version from Scripts
+ *
+ * If you don't remove versions from scripts, you can't cache them.
+ **/
 
+add_filter( 'style_loader_src', 'remove_cssjs_ver', 10, 2 );
+add_filter( 'script_loader_src', 'remove_cssjs_ver', 10, 2 );
+
+function remove_cssjs_ver( $src ) {
+    
+    if( strpos( $src, '?ver=' ) || strpos( $src, '?v=' ) || strpos( $src, '?version=' ) )
+        $src = remove_query_arg( 'ver', $src );
+        return $src;
+}
+
+require_once (dirname(__FILE__) . '/inc/functions/register-sidebars.php');
+require_once (dirname(__FILE__) . '/inc/functions/enqueue-scripts.php');
+require_once (dirname(__FILE__) . '/inc/functions/page-options.php');
+require_once (dirname(__FILE__) . '/inc/functions/breadcrumbs.php');
+require_once (dirname(__FILE__) . '/inc/functions/numbered-pagination.php');
 require_once (dirname(__FILE__) . '/inc/options/theme-config.php');
