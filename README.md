@@ -1,4 +1,5 @@
 # Interpolate-Theme
+
 This is a WordPress theme that has been created using Twitter's Bootstrap and Blank Slate.
 
 It comes packaged with Redux for WordPress to offer extensive customisability. To customise the theme go to "Theme Options".
