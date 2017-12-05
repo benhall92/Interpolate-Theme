@@ -94,7 +94,7 @@ $top_bar_right_html = $inter_options['top-bar-right-html']; ?>
     		</a>
     	<?php else: ?>
 	        <a href="<?php echo get_home_url(); ?>" itemprop="url" class="site-header__logo-link">
-	          <img style="max-width: <?php echo $logo_max_width; ?>;" src="<?php echo $nav_logo['url']; ?>" alt="<?php echo get_bloginfo('name'); ?> | <?php echo get_bloginfo('description'); ?>" itemprop="logo">
+	          <img style="max-width: <?php echo $logo_max_width; ?>;" src="<?php echo $nav_logo['url']; ?>" title="<?php echo get_bloginfo('name'); ?> | <?php echo get_bloginfo('description'); ?>" alt="<?php echo get_bloginfo('name'); ?> | <?php echo get_bloginfo('description'); ?>" itemprop="logo">
 	        </a>
       	<?php endif; ?>
    	<?php if( is_front_page() ): ?>
