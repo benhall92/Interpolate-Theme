@@ -82,6 +82,7 @@ $top_bar_right_html = $inter_options['top-bar-right-html']; ?>
 
 <nav id="topNavBar" class="navbar <?php if ($inter_options['sticky-nav'] == 'yes'): ?>sticky-top<?php endif ?> navbar-expand-lg navbar-light">
 
+
 	<?php if( is_front_page() ): ?>
 		<h1 class="navbar-brand" itemscope itemtype="http://schema.org/Organization">
     <?php else: ?>

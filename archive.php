@@ -37,15 +37,33 @@ if ($show_header == 'yes'): ?>
 	<?php endif ?>
 		
 		<div class="row">
+<<<<<<< HEAD
 			
 			<?php if ($show_title == 'yes'): ?>
 				<div class="col col-lg-6 col-md-12 col-sm-12 col-xs-12 order-lg-1 order-sm-12">
+=======
+
+			<?php if ($show_title == 'yes'): ?>
+				<?php if ($show_breadcrumbs == 'yes'): ?>
+				<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 order-lg-1 order-sm-12">
+				<?php else: ?>
+				<div class="col-md-12 col-sm-12 col-xs-12 order-lg-1 order-sm-2">
+				<?php endif; ?>
+>>>>>>> 643c3c1d0acca6ca9848b518ec28a728495cb605
 					<h1><?php the_archive_title(); ?></h1>
 				</div>
 			<?php endif; ?>
 
 			<?php if ($show_breadcrumbs == 'yes'): ?>
+<<<<<<< HEAD
 				<div class="col col-lg-6 col-md-12 col-sm-12 col-xs-12 order-lg-2 order-sm-1 ">
+=======
+				<?php if ($show_title == 'yes'): ?>
+				<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 order-lg-2 order-sm-1">
+				<?php else: ?>
+				<div class="col-md-12 col-sm-12 col-xs-12 order-lg-2 order-sm-1">
+				<?php endif; ?>
+>>>>>>> 643c3c1d0acca6ca9848b518ec28a728495cb605
 					<?php inter_breadcrumbs(); ?>
 				</div>
 			<?php endif ?>
