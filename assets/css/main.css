@@ -83,6 +83,11 @@ body{
 			color: transparent;
 		}
 
+		.navbar-brand a,
+		.navbar-brand a:hover{
+			color: transparent;
+		}
+
 	.navbar .navbar-nav.ml-auto{
 		margin-right: 1rem;
 	}
