@@ -75,11 +75,14 @@ body{
 
 }
 
-<<<<<<< HEAD
 	.navbar-brand{ margin: 0; }
 
-=======
->>>>>>> 643c3c1d0acca6ca9848b518ec28a728495cb605
+		.navbar-brand span{
+			font-size: 0;
+			overflow: hidden;
+			color: transparent;
+		}
+
 	.navbar .navbar-nav.ml-auto{
 		margin-right: 1rem;
 	}

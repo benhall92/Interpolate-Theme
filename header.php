@@ -86,7 +86,7 @@ $top_bar_right_html = $inter_options['top-bar-right-html']; ?>
 	<?php if( is_front_page() ): ?>
 		<h1 class="navbar-brand" itemscope itemtype="http://schema.org/Organization">
     <?php else: ?>
-		<div itemscope itemtype="http://schema.org/Organization">
+		<div class="navbar-brand" itemscope itemtype="http://schema.org/Organization">
     <?php endif; ?>
     	<?php if ( $use_header_logo == 'no' ): ?>
     		<a href="<?php echo get_home_url(); ?>">
@@ -94,6 +94,9 @@ $top_bar_right_html = $inter_options['top-bar-right-html']; ?>
     		</a>
     	<?php else: ?>
 	        <a href="<?php echo get_home_url(); ?>" itemprop="url" class="site-header__logo-link">
+	        	<?php if( is_front_page() ): ?>
+	        		<span><?php echo get_bloginfo('name'); ?> | <?php echo get_bloginfo('description'); ?></span>
+	        	<?php endif; ?>
 	          <img style="max-width: <?php echo $logo_max_width; ?>;" src="<?php echo $nav_logo['url']; ?>" title="<?php echo get_bloginfo('name'); ?> | <?php echo get_bloginfo('description'); ?>" alt="<?php echo get_bloginfo('name'); ?> | <?php echo get_bloginfo('description'); ?>" itemprop="logo">
 	        </a>
       	<?php endif; ?>
