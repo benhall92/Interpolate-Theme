@@ -563,7 +563,7 @@
                 'type'     => 'color_rgba',
                 'title'    => __( 'Navigation Background Colour RGBA', 'redux-framework-demo' ),
                 'subtitle' => __( 'Set the background colour of the Navigation.', 'redux-framework-demo' ),
-                'output' => array('background-color' => '#topNavBar'),
+                'output' => array('background-color' => '#topNavBar, #topNavBar .sub-menu'),
                 'default'  => array(
                     'color' => '#f8f9fa',
                     'alpha' => '1'
@@ -575,7 +575,7 @@
                 'type'     => 'color_rgba',
                 'title'    => __( 'Navigation Link Colour RGBA', 'redux-framework-demo' ),
                 'subtitle' => __( 'Set the link colour of the Navigation.', 'redux-framework-demo' ),
-                'output' => array('#menu-main-menu .nav-item .nav-link'),
+                'output' => array('#menu-main-menu .nav-item .nav-link, .navbar .navbar-nav li.menu-item-has-children > .arrow'),
                 'default'  => array(
                     'color' => '#BBBBBB',
                     'alpha' => '1'
