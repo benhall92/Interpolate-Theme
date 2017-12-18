@@ -1643,6 +1643,7 @@
                 'type'     => 'ace_editor',
                 'title'    => __('CSS Code', 'redux-framework-demo'),
                 'subtitle' => __('This editor uses CSS. Paste your CSS code here.', 'redux-framework-demo'),
+                'default' => '',
                 'mode'     => 'scss',
                 'theme'    => 'monokai'
             )
@@ -1659,6 +1660,7 @@
                 'title'    => __('JS Code', 'redux-framework-demo'),
                 'subtitle' => __('This editor uses JS. Paste your JS code here.', 'redux-framework-demo'),
                 'mode'     => 'javascript',
+                'default' => '',
                 'theme'    => 'monokai'
             )
         )
