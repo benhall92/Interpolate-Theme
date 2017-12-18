@@ -12,13 +12,13 @@ $youtube 		= $inter_options['youtube-link']; ?>
 
 <?php
 
-$social['fa fa-facebook-official'] = $facebook;
-$social['fa fa-twitter'] = $twiiter;
-$social['fa fa-instagram'] = $instagram;
-$social['fa fa-google-plus'] = $google_plus;
-$social['fa fa-pinterest'] = $pinterest;
-$social['fa fa-linkedin'] = $linkedin;
-$social['fa fa-youtube'] = $youtube; ?>
+$social['fab fa-facebook'] = $facebook;
+$social['fab fa-twitter'] = $twiiter;
+$social['fab fa-instagram'] = $instagram;
+$social['fab fa-google-plus'] = $google_plus;
+$social['fab fa-pinterest'] = $pinterest;
+$social['fab fa-linkedin'] = $linkedin;
+$social['fab fa-youtube'] = $youtube; ?>
 
 <?php if ( !empty($social) ): ?>
 

@@ -88,7 +88,7 @@ if( $posts_per_row == '2' ){
 				</div>
 
 				<div class="card-footer text-muted">
-					<span class="fa fa-user" aria-hidden="true"></span> <?php the_author(); ?>&nbsp; / &nbsp;<span class="fa fa-calendar" aria-hidden="true"></span> <?php the_date(); ?>
+					<span class="fa fa-user" aria-hidden="true"></span> <?php the_author(); ?>&nbsp; | &nbsp;<span class="fa fa-calendar" aria-hidden="true"></span> <?php the_date('d-m-Y'); ?>
 				</div>
 
 			</div>
@@ -122,7 +122,7 @@ if( $posts_per_row == '2' ){
 
 			<div class="alert alert-secondary" role="alert">
 
-				<span class="fa fa-user" aria-hidden="true"></span> <?php the_author(); ?> / <span class="fa fa-calendar" aria-hidden="true"></span> <?php the_date(); ?>
+				<span class="fa fa-user" aria-hidden="true"></span> <?php the_author(); ?> | <span class="fa fa-calendar" aria-hidden="true"></span> <?php the_date('d-m-Y'); ?>
 
 			</div>
 
