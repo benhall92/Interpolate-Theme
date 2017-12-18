@@ -147,6 +147,15 @@ function remove_cssjs_ver( $src ) {
         $src = remove_query_arg( 'ver', $src );
         return $src;
 }
+/**
+ * Move Yoast SEO to the bottom of the page
+ *
+ * SRC: https://gist.github.com/aderaaij/6767503
+ **/
+function inter_yoasttobottom() {
+	return 'low';
+}
+add_filter( 'wpseo_metabox_prio', 'inter_yoasttobottom');
 
 require_once (dirname(__FILE__) . '/inc/functions/register-sidebars.php');
 require_once (dirname(__FILE__) . '/inc/functions/enqueue-scripts.php');

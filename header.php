@@ -36,19 +36,22 @@ $logo_max_width 	= $inter_options['nav-logo-max-width'];
 
 $show_top_bar 		= $inter_options['show-top-bar'];
 $top_bar_left_html 	= $inter_options['top-bar-left-html'];
-$top_bar_right_html = $inter_options['top-bar-right-html']; ?>
+$show_left 			= $inter_options['top-bar-left-mobile'];
+$top_bar_right_html = $inter_options['top-bar-right-html'];
+$show_right			= $inter_options['top-bar-right-mobile'];
+$show_top			= $inter_options['top-bar-mobile']; ?>
 
 <body <?php body_class(); ?>>
 
 <?php if ($show_top_bar == 'yes'): ?>
 
-	<div class="top-bar">
+	<div class="top-bar <?php if($show_top == 'no'):?>d-none d-sm-none d-md-block<?php endif; ?>">
 
 		<div class="row">
 
 			<?php if ($top_bar_left_html != ""): ?>
 
-			<div class="col-lg-6 col-md-6">
+			<div class="col-lg-6 col-md-6 <?php if($show_left == 'no'):?>d-none d-sm-none d-md-block<?php endif; ?>">
 
 				<div class="text-left">
 
@@ -62,7 +65,7 @@ $top_bar_right_html = $inter_options['top-bar-right-html']; ?>
 
 			<?php if ($top_bar_right_html != ""): ?>
 
-			<div class="col-lg-6 col-md-6">
+			<div class="col-lg-6 col-md-6 <?php if($show_right == 'no'):?>d-none d-sm-none d-md-block<?php endif; ?>">
 
 				<div class="text-right">
 
@@ -89,7 +92,7 @@ $top_bar_right_html = $inter_options['top-bar-right-html']; ?>
 		<div class="navbar-brand" itemscope itemtype="http://schema.org/Organization">
     <?php endif; ?>
     	<?php if ( $use_header_logo == 'no' ): ?>
-    		<a href="<?php echo get_home_url(); ?>">
+    		<a class="navbar-brand-text" href="<?php echo get_home_url(); ?>">
     			<?php echo get_bloginfo('name'); ?>
     		</a>
     	<?php else: ?>

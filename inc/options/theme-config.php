@@ -430,25 +430,16 @@
                 'default'  => 'yes'
             ),
             array(
-                'id'            => 'top-bar-font',
-                'type'          => 'typography',
-                'title'         => __( 'Top Bar Font Size', 'redux-framework-demo' ),
-                'subtitle'      => __( 'Specify the Top Bar font properties.', 'redux-framework-demo' ),
-                'google'        => false,
-                'output'        => array('.top-bar p, .top-bar a, .top-bar i'),
-                'line-height'   => false,
-                'color'         => false,
-                'text-align'    => false,
-                'font-family'   => false,
-                'font-weight'   => false,
-                'font-style'    => false,
-                'text-transform' => true,
-                'hint'          => false,
-                'units'         => 'rem',
-                'default'       => array(
-                    'font-size'   => '1rem',
-                    'text-transform' => 'uppercase',
-                )
+                'id'       => 'top-bar-mobile',
+                'type'     => 'select',
+                'title'    => __( 'Show Top Bar on small devices?', 'redux-framework-demo' ),
+                'subtitle' => __( 'Devices less than 768px.', 'redux-framework-demo' ),
+                //Must provide key => value pairs for select options
+                'options'  => array(
+                    'yes' => 'Yes',
+                    'no' => 'No'
+                ),
+                'default'  => 'no'
             ),
             array(
                 'id'       => 'top-bar-background-colour',
@@ -483,13 +474,37 @@
                 'theme'    => 'chrome'
             ),
             array(
+                'id'       => 'top-bar-left-mobile',
+                'type'     => 'select',
+                'title'    => __( 'Show Top Bar left small devices?', 'redux-framework-demo' ),
+                'subtitle' => __( 'Devices less than 768px.', 'redux-framework-demo' ),
+                //Must provide key => value pairs for select options
+                'options'  => array(
+                    'yes' => 'Yes',
+                    'no' => 'No'
+                ),
+                'default'  => 'no'
+            ),
+            array(
                 'id'       => 'top-bar-right-html',
                 'type'     => 'ace_editor',
                 'title'    => __('Right HTML', 'redux-framework-demo'),
                 'subtitle' => __('Paste your HTML code here.', 'redux-framework-demo'),
                 'mode'     => 'html',
                 'theme'    => 'chrome'
-            )
+            ),
+            array(
+                'id'       => 'top-bar-right-mobile',
+                'type'     => 'select',
+                'title'    => __( 'Show Top bar right small devices?', 'redux-framework-demo' ),
+                'subtitle' => __( 'Devices less than 768px.', 'redux-framework-demo' ),
+                //Must provide key => value pairs for select options
+                'options'  => array(
+                    'yes' => 'Yes',
+                    'no' => 'No'
+                ),
+                'default'  => 'no'
+            ),
         )
     ) );
 
@@ -515,6 +530,7 @@
                 'id'       => 'nav-logo',
                 'type'     => 'media',
                 'url'      => false,
+                'required' => array('use-nav-logo', 'equals', 'yes'),
                 'title'    => __( 'Navigation Logo', 'redux-framework-demo' ),
                 'compiler' => 'true'
             ),
@@ -522,8 +538,28 @@
                 'id'       => 'nav-logo-max-width',
                 'type'     => 'text',
                 'title'    => __( 'Navigation Logo max width', 'redux-framework-demo' ),
+                'required' => array('use-nav-logo', 'equals', 'yes'),
                 'subtitle' => __( 'Set a max width on the Navigation logo?', 'redux-framework-demo' ),
                 'default'  => '100px',
+            ),
+            array(
+                'id'            => 'website-title-font',
+                'type'          => 'typography',
+                'title'         => __( 'Website Title', 'redux-framework-demo' ),
+                'subtitle'      => __( 'Specify the Website Font font properties - this is the name of the website that appears in your navigation when you do not want to use a logo.', 'redux-framework-demo' ),
+                'google'        => true,
+                'output'        => array( '.navbar-brand a.navbar-brand-text' ),
+                'line-height'   => false,
+                'text-align'    => false,
+                'text-transform' => true,
+                'units'         => 'rem',
+                'required' => array('use-nav-logo', 'equals', 'no'),
+                'default'       => array(
+                    'color'       => '#000000',
+                    'font-size'   => '1rem',
+                    'font-family' => 'Montserrat',
+                    'font-weight' => 'Normal',
+                )
             ),
             array(
                 'id'       => 'sticky-nav',
@@ -575,7 +611,7 @@
                 'type'     => 'color_rgba',
                 'title'    => __( 'Navigation Link Colour RGBA', 'redux-framework-demo' ),
                 'subtitle' => __( 'Set the link colour of the Navigation.', 'redux-framework-demo' ),
-                'output' => array('#menu-main-menu .nav-item .nav-link, .navbar .navbar-nav li.menu-item-has-children > .arrow, .navbar .navbar-toggler'),
+                'output' => array('#navbarSupportedContent .navbar-nav .nav-item .nav-link, .navbar .navbar-nav li.menu-item-has-children > .arrow, .navbar .navbar-toggler'),
                 'default'  => array(
                     'color' => '#BBBBBB',
                     'alpha' => '1'
@@ -587,7 +623,7 @@
                 'type'     => 'color_rgba',
                 'title'    => __( 'Navigation Link Hover Colour RGBA', 'redux-framework-demo' ),
                 'subtitle' => __( 'Set the link hover colour of the Navigation.', 'redux-framework-demo' ),
-                'output' => array('#menu-main-menu .nav-item .nav-link:hover'),
+                'output' => array('#navbarSupportedContent .navbar-nav .nav-item .nav-link:hover'),
                 'default'  => array(
                     'color' => '#007bff',
                     'alpha' => '1'
@@ -599,7 +635,7 @@
                 'type'     => 'color_rgba',
                 'title'    => __( 'Navigation Link Active Colour RGBA', 'redux-framework-demo' ),
                 'subtitle' => __( 'Set the link active colour of the Navigation.', 'redux-framework-demo' ),
-                'output' => array('#menu-main-menu .nav-item.current-menu-item .nav-link'),
+                'output' => array('#navbarSupportedContent .navbar-nav .nav-item.current-menu-item .nav-link'),
                 'default'  => array(
                     'color' => '#007bff',
                     'alpha' => '1'
@@ -681,6 +717,7 @@
                 'title'    => __( 'CTA Border', 'redux-framework-demo' ),
                 'subtitle' => __( 'Select a border for the CTA.', 'redux-framework-demo' ),
                 'output'   => array( '#navBarCTA' ),
+                'all'      => false,
                 'default'  => array(
                     'border-color'  => '#007bff',
                     'border-style'  => 'solid',
@@ -1435,7 +1472,25 @@
                 'title'         => __( 'Navigation', 'redux-framework-demo' ),
                 'subtitle'      => __( 'Specify the Navigation font properties.', 'redux-framework-demo' ),
                 'google'        => true,
-                'output'        => array( '#menu-main-menu .nav-item .nav-link' ),
+                'output'        => array( '#navbarSupportedContent .navbar-nav .nav-item .nav-link' ),
+                'line-height'   => true,
+                'text-align'    => false,
+                'color'         => false,
+                'units'         => 'rem',
+                'text-transform' => true,
+                'default'       => array(
+                    'font-size'   => '1rem',
+                    'font-family' => 'Arial, Helvetica, sans-serif',
+                    'font-weight' => 'Normal',
+                )
+            ),
+            array(
+                'id'            => 'topbar-navigation',
+                'type'          => 'typography',
+                'title'         => __( 'Top bar', 'redux-framework-demo' ),
+                'subtitle'      => __( 'Specify the Top bar font properties.', 'redux-framework-demo' ),
+                'google'        => true,
+                'output'        => array( '.top-bar' ),
                 'line-height'   => true,
                 'text-align'    => false,
                 'color'         => false,

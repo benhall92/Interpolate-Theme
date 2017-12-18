@@ -148,6 +148,26 @@ body{
 			border-left: .3em solid transparent;
 		}
 
+.top-bar{
+	padding: 10px;
+}
+	.top-bar h1, .top-bar h2,
+	.top-bar h3, .top-bar h4,
+	.top-bar h5, .top-bar h6,
+	.top-bar p, .top-bar a,
+	.top-bar small, .top-bar em,
+	.top-bar strong{
+		margin: 0;
+		color: inherit;
+		font-family: inherit;
+		font-weight: inherit;
+		font-style: inherit;
+		font-size: inherit;
+		line-height: inherit;
+		text-transform: inherit;
+	}
+
+
 @media screen and (max-width: 991px){
 
 	.navbar .navbar-nav li.menu-item-has-children > .arrow{
