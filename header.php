@@ -39,7 +39,10 @@ $top_bar_left_html 	= $inter_options['top-bar-left-html'];
 $show_left 			= $inter_options['top-bar-left-mobile'];
 $top_bar_right_html = $inter_options['top-bar-right-html'];
 $show_right			= $inter_options['top-bar-right-mobile'];
-$show_top			= $inter_options['top-bar-mobile']; ?>
+$show_top			= $inter_options['top-bar-mobile'];
+
+
+$showSearchIconMobile = $inter_options['show-search-icon-mobile']; ?>
 
 <body <?php body_class(); ?>>
 
@@ -108,6 +111,14 @@ $show_top			= $inter_options['top-bar-mobile']; ?>
 	<?php else: ?>
 		</div>
 	<?php endif; ?>
+
+	<?php if ($showSearchIconMobile == 'yes'): ?>
+
+	<button id="mobileSearchToggle" class="header-mobile-button d-block d-sm-block d-md-block d-lg-none">
+		<i class="fa fa-search"></i>
+	</button>
+
+	<?php endif ?>
   	
   	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     	<i class="fa fa-bars"></i>
@@ -151,3 +162,19 @@ $show_top			= $inter_options['top-bar-mobile']; ?>
 	</div>
 
 </nav>
+
+<div class="mobile-search">
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col">
+				<?php get_search_form(); ?>
+			</div>
+				
+		</div>
+
+	</div>
+	
+</div>

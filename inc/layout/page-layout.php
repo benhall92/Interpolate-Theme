@@ -144,7 +144,13 @@ if( $posts_per_row == '2' ){
 			
 		<?php endif ?>
 
-		<?php if ( !post_password_required() ) comments_template( '', true ); ?>
+		<?php if ( !post_password_required() ): ?>
+
+			<hr>
+
+			<?php comments_template( '', true ); ?>
+
+		<?php endif; ?>
 
 	<?php endwhile; endif; ?>
 

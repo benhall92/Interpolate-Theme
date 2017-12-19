@@ -15,54 +15,53 @@ $sidebar_position 	= get_post_meta($post_id, '_sidebar_position', true); ?>
 <main class="page-main">
 
 	<?php if ($page_layout == 'boxed'): ?>
-		
-		<!-- container -->
-		<div class="container">
+	<!-- container -->
+	<div class="container">
 
-	<?php endif ?>
+	<?php else: ?>
+	<!-- container fluid -->
+	<div class="container-fluid">
 
-	<div class="row">
+	<?php endif; ?>
 
-		<?php if ($show_sidebar && $sidebar_position == 'left'): ?>
+		<div class="row">
 
-		<aside class="col-lg-3 col-md-3">
-			<?php get_sidebar(); ?>
-		</aside>
-			
-		<?php endif ?>
+			<?php if ($show_sidebar && $sidebar_position == 'left'): ?>
 
-		<?php if ($show_sidebar): ?>
+			<aside class="col-lg-3 col-md-3">
+				<?php get_sidebar(); ?>
+			</aside>
+				
+			<?php endif ?>
 
-		<!-- col -->
-		<div class="col-lg-9 col-md-9">
+			<?php if ($show_sidebar): ?>
 
-		<?php else: ?>
+			<!-- col -->
+			<div class="col-lg-9 col-md-9">
 
-		<!-- col -->
-		<div class="col">
+			<?php else: ?>
 
-		<?php endif ?>
+			<!-- col -->
+			<div class="col">
 
-		<?php get_template_part('inc/layout/page-layout'); ?>
+			<?php endif ?>
 
-		<!-- /col -->
+			<?php get_template_part('inc/layout/page-layout'); ?>
+
+			<!-- /col -->
+			</div>
+
+			<?php if ($show_sidebar && $sidebar_position == 'right'): ?>
+
+			<aside class="col-lg-3 col-md-3">
+				<?php get_sidebar(); ?>
+			</aside>
+				
+			<?php endif ?>
+
 		</div>
 
-		<?php if ($show_sidebar && $sidebar_position == 'right'): ?>
-
-		<aside class="col-lg-3 col-md-3">
-			<?php get_sidebar(); ?>
-		</aside>
-			
-		<?php endif ?>
-
+	<!-- /container -->
 	</div>
-
-	<?php if ($page_layout == 'boxed'): ?>
-		
-		<!-- /container -->
-		</div>
-
-	<?php endif ?>
 	
 </main>

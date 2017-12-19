@@ -20,6 +20,11 @@ if ($show_header): ?>
 	<?php if ($page_layout == 'boxed'): ?>
 	<!-- container -->
 	<div class="container">
+
+	<?php else: ?>
+	<!-- container fluid -->
+	<div class="container-fluid">
+
 	<?php endif ?>
 		
 		<div class="row">
@@ -27,7 +32,7 @@ if ($show_header): ?>
 			<?php if ($show_title): ?>
 
 				<?php if (!$show_breadcrumbs): ?>
-				
+
 				<div class="col-md-12 col-sm-12 xs-12 order-lg-1 order-sm-12 order-xs-12">
 				<?php else: ?>
 				<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 order-lg-1 order-sm-12 order-xs-12">
@@ -50,10 +55,8 @@ if ($show_header): ?>
 
 		</div>
 
-	<?php if ($page_layout == 'boxed'): ?>
 	<!-- /container -->
 	</div>
-	<?php endif ?>
 	
 </header>
 

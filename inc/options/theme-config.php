@@ -625,7 +625,7 @@
                 'subtitle' => __( 'Set the link hover colour of the Navigation.', 'redux-framework-demo' ),
                 'output' => array('#navbarSupportedContent .navbar-nav .nav-item .nav-link:hover'),
                 'default'  => array(
-                    'color' => '#007bff',
+                    'color' => '#c42d2d',
                     'alpha' => '1'
                 ),
                 'mode'     => 'color',
@@ -637,7 +637,7 @@
                 'subtitle' => __( 'Set the link active colour of the Navigation.', 'redux-framework-demo' ),
                 'output' => array('#navbarSupportedContent .navbar-nav .nav-item.current-menu-item .nav-link'),
                 'default'  => array(
-                    'color' => '#007bff',
+                    'color' => '#c42d2d',
                     'alpha' => '1'
                 ),
                 'mode'     => 'color',
@@ -694,7 +694,7 @@
                 'subtitle' => __( 'Set the background colour of the CTA.', 'redux-framework-demo' ),
                 'output' => array('#navBarCTA'),
                 'default'  => array(
-                    'color' => '#007bff',
+                    'color' => '#c42d2d',
                     'alpha' => '1'
                 ),
                 'mode'     => 'background',
@@ -719,7 +719,7 @@
                 'output'   => array( '#navBarCTA' ),
                 'all'      => false,
                 'default'  => array(
-                    'border-color'  => '#007bff',
+                    'border-color'  => '#c42d2d',
                     'border-style'  => 'solid',
                     'border-top'    => '1px',
                     'border-right'  => '1px',
@@ -749,6 +749,18 @@
                 'default'  => 'yes'
             ),
             array(
+                'id'       => 'show-search-icon-mobile',
+                'type'     => 'select',
+                'title'    => __( 'Show Search icon in Mobile Navigation bar?', 'redux-framework-demo' ),
+                'subtitle' => __( 'Show the Search Bar within the Mobile Navigation Bar?', 'redux-framework-demo' ),
+                //Must provide key => value pairs for select options
+                'options'  => array(
+                    'yes' => 'Yes',
+                    'no' => 'No'
+                ),
+                'default'  => 'yes'
+            ),
+            array(
                 'id'       => 'nav-search-bar-placeholder',
                 'type'     => 'text',
                 'title'    => __( 'Search Bar placeholder text', 'redux-framework-demo' ),
@@ -760,9 +772,9 @@
                 'type'     => 'color_rgba',
                 'title'    => __( 'Search Bar Background Colour RGBA', 'redux-framework-demo' ),
                 'subtitle' => __( 'Set the background colour of the Search Bar.', 'redux-framework-demo' ),
-                'output' => array('#topNavBar #search'),
+                'output' => array('#topNavBar #search, .mobile-search #search'),
                 'default'  => array(
-                    'color' => '#007bff',
+                    'color' => '#FFF',
                     'alpha' => '1'
                 ),
                 'mode'     => 'background',
@@ -772,7 +784,7 @@
                 'type'     => 'color_rgba',
                 'title'    => __( 'Search Bar Font Colour RGBA', 'redux-framework-demo' ),
                 'subtitle' => __( 'Set the font colour of the Search Bar.', 'redux-framework-demo' ),
-                'output'   => array('#topNavBar #search'),
+                'output'   => array('#topNavBar #search, .mobile-search #search'),
                 'default'  => array(
                     'color' => '#585858',
                     'alpha' => '1'
@@ -784,9 +796,10 @@
                 'type'     => 'border',
                 'title'    => __( 'Search Bar Border', 'redux-framework-demo' ),
                 'subtitle' => __( 'Select a border for the Search Bar.', 'redux-framework-demo' ),
-                'output'   => array('#topNavBar #search'),
+                'output'   => array('#topNavBar #search, .mobile-search #search'),
+                'all'       => false,
                 'default'  => array(
-                    'border-color'  => '#007bff',
+                    'border-color'  => '#c42d2d',
                     'border-style'  => 'solid',
                     'border-top'    => '1px',
                     'border-right'  => '1px',
@@ -799,9 +812,9 @@
                 'type'     => 'color_rgba',
                 'title'    => __( 'Search Bar button Background Colour RGBA', 'redux-framework-demo' ),
                 'subtitle' => __( 'Set the background colour of the Search Bar button.', 'redux-framework-demo' ),
-                'output' => array('#topNavBar #searchSubmit'),
+                'output' => array('#topNavBar #searchSubmit, .mobile-search #searchSubmit'),
                 'default'  => array(
-                    'color' => '#007bff',
+                    'color' => '#c42d2d',
                     'alpha' => '1'
                 ),
                 'mode'     => 'background',
@@ -811,7 +824,7 @@
                 'type'     => 'color_rgba',
                 'title'    => __( 'Search Bar button Font Colour RGBA', 'redux-framework-demo' ),
                 'subtitle' => __( 'Set the font colour of the Search Bar button.', 'redux-framework-demo' ),
-                'output'   => array('#topNavBar #searchSubmit'),
+                'output'   => array('#topNavBar #searchSubmit, .mobile-search #searchSubmit'),
                 'default'  => array(
                     'color' => '#FFFFFF',
                     'alpha' => '1'
@@ -823,9 +836,10 @@
                 'type'     => 'border',
                 'title'    => __( 'Search Bar button Border', 'redux-framework-demo' ),
                 'subtitle' => __( 'Select a border for the Search Bar button.', 'redux-framework-demo' ),
-                'output'   => array('#topNavBar #searchSubmit'),
+                'output'   => array('#topNavBar #searchSubmit, .mobile-search #searchSubmit'),
+                'all'       => false,
                 'default'  => array(
-                    'border-color'  => '#007bff',
+                    'border-color'  => '#c42d2d',
                     'border-style'  => 'solid',
                     'border-top'    => '1px',
                     'border-right'  => '1px',
@@ -892,7 +906,7 @@
                 'type'     => 'color_rgba',
                 'title'    => __( 'Page Header Breadcrumb Font Colour RGBA', 'redux-framework-demo' ),
                 'subtitle' => __( 'Set the breadcrumb font colour of the Page Header button.', 'redux-framework-demo' ),
-                'output' => array('header.page-header .breadcrumb-item a'),
+                'output' => array('header.page-header .breadcrumb-item a, .breadcrumb-item:before, .breadcrumb-item+.breadcrumb-item::before'),
                 'default'  => array(
                     'color' => '#FFFFFF',
                     'alpha' => '1'
@@ -1359,6 +1373,27 @@
                 ),
             ),
             array(
+                'id'            => 'typography-body-anchor',
+                'type'          => 'typography',
+                'title'         => __( 'Ancher Font', 'redux-framework-demo' ),
+                'subtitle'      => __( 'Specfify link font properties.', 'redux-framework-demo' ),
+                'google'        => false,
+                'output'        => array( 'a, p a' ),
+                'line-height'   => false,
+                'text-align'    => false,
+                'font-size'     => false,
+                'font-family'   => false,
+                'font-weight'   => false,
+                'font-style'    => false,
+                'units'         => 'rem',
+                'default'       => array(
+                    'color'       => '#000000',
+                    'font-size'   => '1rem',
+                    'font-family' => 'Arial, Helvetica, sans-serif',
+                    'font-weight' => 'Normal',
+                ),
+            ),
+            array(
                 'id'            => 'typography-heading-one',
                 'type'          => 'typography',
                 'title'         => __( 'Heading One', 'redux-framework-demo' ),
@@ -1609,9 +1644,9 @@
                 'id'       => 'primary-btn-background-colour',
                 'type'     => 'color_rgba',
                 'title'    => __( 'Primary Button Background colour', 'redux-framework-demo' ),
-                'output'   => array('.btn-primary, .btn-primary:hover, .woocommerce button.single_add_to_cart_button.button, .woocommerce a.button, .woocommerce a.button:hover'),
+                'output'   => array('.btn-primary, .btn-primary:hover, .woocommerce button.single_add_to_cart_button.button, .woocommerce a.button, .woocommerce a.button:hover, #commentform input[type="submit"]'),
                 'default'  => array(
-                    'color' => '#007bff',
+                    'color' => '#c42d2d',
                     'alpha' => '1'
                 ),
                 'mode'     => 'background',
@@ -1620,7 +1655,7 @@
                 'id'       => 'primary-btn-font-colour',
                 'type'     => 'color_rgba',
                 'title'    => __( 'Primary Button Font colour', 'redux-framework-demo' ),
-                'output'   => array('.btn-primary, .btn-primary:hover, .woocommerce button.single_add_to_cart_button.button, .woocommerce a.button, .woocommerce a.button:hover'),
+                'output'   => array('.btn-primary, .btn-primary:hover, .woocommerce button.single_add_to_cart_button.button, .woocommerce a.button, .woocommerce a.button:hover, #commentform input[type="submit"]'),
                 'default'  => array(
                     'color' => '#FFFFFF',
                     'alpha' => '1'
@@ -1631,9 +1666,9 @@
                 'id'       => 'primary-btn-border',
                 'type'     => 'border',
                 'title'    => __( 'Primary Button Border', 'redux-framework-demo' ),
-                'output'   => array( '.btn-primary, .btn-primary:hover, .woocommerce button.single_add_to_cart_button.button, .woocommerce a.button, .woocommerce a.button:hover' ),
+                'output'   => array( '.btn-primary, .btn-primary:hover, .woocommerce button.single_add_to_cart_button.button, .woocommerce a.button, .woocommerce a.button:hover, #commentform input[type="submit"]' ),
                 'default'  => array(
-                    'border-color'  => '#007bff',
+                    'border-color'  => '#c42d2d',
                     'border-style'  => 'solid',
                     'border-top'    => '1px',
                     'border-right'  => '1px',
@@ -1654,7 +1689,7 @@
                 'id'       => 'secondary-btn-background-colour',
                 'type'     => 'color_rgba',
                 'title'    => __( 'Secondary Button Background colour', 'redux-framework-demo' ),
-                'output'   => array('.btn-secondary, .btn-secondary:hover'),
+                'output'   => array('.btn-secondary, .btn-secondary:hover, #sidebar button, #sidebar input[type="submit"], .single-post-tags .badge'),
                 'default'  => array(
                     'color' => '#e4e4e4',
                     'alpha' => '1'
@@ -1665,7 +1700,7 @@
                 'id'       => 'secondary-btn-font-colour',
                 'type'     => 'color_rgba',
                 'title'    => __( 'Secondary Button Font colour', 'redux-framework-demo' ),
-                'output'   => array('.btn-secondary, .btn-secondary:hover'),
+                'output'   => array('.btn-secondary, .btn-secondary:hover #sidebar button, #sidebar input[type="submit"], .single-post-tags .badge'),
                 'default'  => array(
                     'color' => '#000000',
                     'alpha' => '1'
@@ -1676,7 +1711,7 @@
                 'id'       => 'secondary-btn-border',
                 'type'     => 'border',
                 'title'    => __( 'Secondary Button Border', 'redux-framework-demo' ),
-                'output'   => array( '.btn-secondary, .btn-secondary:hover' ),
+                'output'   => array( '.btn-secondary, .btn-secondary:hover #sidebar button, #sidebar input[type="submit"]' ),
                 'default'  => array(
                     'border-color'  => '#e4e4e4',
                     'border-style'  => 'solid',

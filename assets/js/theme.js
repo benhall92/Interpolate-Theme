@@ -25,12 +25,29 @@ jQuery(document).ready(function($){
 		});
 	}
 
+	Inter.mobileSearchToggle = function () {
+
+		var $searchToggle = $('#mobileSearchToggle'),
+			$mobileSearch = $('.mobile-search');
+
+		if( $searchToggle.length == 0 ){
+
+			return;
+		}
+
+		$searchToggle.on('click', function () {
+
+			$mobileSearch.toggleClass('is--open');
+		});
+	}
+
 	Inter.init = function() {
 
 		var self = this;
 
 		self.interAddArrow();
 		self.toggleSubMenu();
+		self.mobileSearchToggle();
 	}
 
 	Inter.init();

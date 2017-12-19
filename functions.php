@@ -78,7 +78,7 @@ function inter_show_tags() {
 
 	if ($posttags) {
 
-		echo '<p>';
+		echo '<p class="single-post-tags">';
 		
 		$array = [];
 		
