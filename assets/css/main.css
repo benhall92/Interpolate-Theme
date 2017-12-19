@@ -113,6 +113,10 @@ body{
 	.navbar .navbar-nav.ml-auto{
 		margin-right: 1rem;
 	}
+
+		.navbar .navbar-nav.ml-auto .sub-menu{ text-align: right; }
+
+		.navbar .navbar-nav.mr-auto .sub-menu{ text-align: left; }
  
 	.navbar .header-cta{
 		margin: 0 0 0 10px;

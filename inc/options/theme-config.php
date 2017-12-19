@@ -220,13 +220,13 @@
         } else {
             $v = str_replace( '-', '_', $args['opt_name'] );
         }
-        $args['intro_text'] = sprintf( __( '<p>Did you know that Redux sets a global variable for you? To access any of your saved options from within your code you can use your global variable: <strong>$%1$s</strong></p>', 'redux-framework-demo' ), $v );
+        $args['intro_text'] = sprintf( __( '<h2>Bootstrap</h2><p>When adding HTML or need a reference to the Grid Layout please see <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/" target="_blank">Bootstrap</a>. This theme was built using Bootstrap as a foundation and shares the same code.</p><h3>Helpful Links</h3><ol><li>Grid Reference: <a href="https://getbootstrap.com/docs/4.0/layout/grid/" target="_blank">Bootstrap Grid</a></li><li>Hide/Show elements on mobile/tablet/desktop: <a href="https://getbootstrap.com/docs/4.0/utilities/display/" target="_bank">Bootstrap display utilities</a></li><li>Font Awesome Icons: <a href="https://fontawesome.com/" target="_blank">Font Awesome 5</a></li></ol>', 'redux-framework-demo' ), $v );
     } else {
         $args['intro_text'] = __( "<p>This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.</p>", 'redux-framework-demo' );
     }
 
     // Add content after the form.
-    $args['footer_text'] = __( "<p>This text is displayed below the options panel. It isn\'t required, but more info is always better! The footer_text field accepts all HTML.</p>", 'redux-framework-demo' );
+    $args['footer_text'] = __( '<p>This theme was developed by <a href="https://www.interpolate.co" target="_blank">Interpolate co</a>.</p>', 'redux-framework-demo' );
 
     Redux::setArgs( $opt_name, $args );
 
@@ -635,7 +635,7 @@
                 'type'     => 'color_rgba',
                 'title'    => __( 'Navigation Link Active Colour RGBA', 'redux-framework-demo' ),
                 'subtitle' => __( 'Set the link active colour of the Navigation.', 'redux-framework-demo' ),
-                'output' => array('#navbarSupportedContent .navbar-nav .nav-item.current-menu-item .nav-link'),
+                'output' => array('#navbarSupportedContent .navbar-nav .nav-item.current-menu-item > a, #navbarSupportedContent .navbar-nav .nav-item.current_page_parent > a'),
                 'default'  => array(
                     'color' => '#c42d2d',
                     'alpha' => '1'
