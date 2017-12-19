@@ -995,7 +995,7 @@
                 'type'     => 'color_rgba',
                 'title'    => __( 'Footer Font Colour RGBA', 'redux-framework-demo' ),
                 'subtitle' => __( 'Set the title font colour of the Footer.', 'redux-framework-demo' ),
-                'output' => array('#footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6, #footer p, #footer a, #footer li'),
+                'output' => array('#footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6, #footer p, #footer a, #footer li, #copyright'),
                 'default'  => array(
                     'color' => '#333333',
                     'alpha' => '1'
@@ -1362,7 +1362,7 @@
                 'subtitle'      => __( 'Specify the Body font properties.', 'redux-framework-demo' ),
                 'google'        => true,
                 'output'        => array( 'p, .p, li, .li, th, td, dt' ),
-                'line-height'   => false,
+                'line-height'   => true,
                 'text-align'    => false,
                 'units'         => 'rem',
                 'default'       => array(
@@ -1536,6 +1536,23 @@
                     'font-family' => 'Arial, Helvetica, sans-serif',
                     'font-weight' => 'Normal',
                 )
+            ),
+            array(
+                'id'            => 'typography-footer',
+                'type'          => 'typography',
+                'title'         => __( 'Footer Font', 'redux-framework-demo' ),
+                'subtitle'      => __( 'Specify the Footer font properties.', 'redux-framework-demo' ),
+                'google'        => true,
+                'output'        => array( '#footer p, #footer a, #footer li, #copyright' ),
+                'line-height'   => true,
+                'text-align'    => false,
+                'units'         => 'rem',
+                'default'       => array(
+                    'color'       => '#000000',
+                    'font-size'   => '1rem',
+                    'font-family' => 'Arial, Helvetica, sans-serif',
+                    'font-weight' => 'Normal',
+                ),
             ),
             array(
                 'id'            => 'typography-button-primary',

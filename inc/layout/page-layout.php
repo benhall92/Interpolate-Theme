@@ -145,10 +145,14 @@ if( $posts_per_row == '2' ){
 		<?php endif ?>
 
 		<?php if ( !post_password_required() ): ?>
-
+			
+			<?php if (is_singular('post') && comments_open() ): ?>
+			
 			<hr>
 
 			<?php comments_template( '', true ); ?>
+
+			<?php endif ?>
 
 		<?php endif; ?>
 
