@@ -1,0 +1,19 @@
+.inter-page-options hr{
+	margin-top: 20px 0;
+}
+
+.inter-page-options p input[type="radio"]{
+	margin-left: 20px;
+}
+	
+	.inter-page-options p input[type="radio"]:first-child{ margin-left: 0px; }
+
+.inter-page-options input[type="text"]{
+	padding: 10px;
+    min-width: 300px;
+}
+
+.inter-page-options  .inter-page-options__header{
+	font-size: 15px;
+	font-weight: bold;
+}

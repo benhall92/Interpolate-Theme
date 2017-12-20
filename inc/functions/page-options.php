@@ -7,7 +7,7 @@
  */
 function inter_add_page_meta_boxes( $post ){
 
-	add_meta_box( 'page_options', __( 'Page Options', 'inter_theme' ), 'inter_page_meta_box_build', array('page', 'post'), 'normal', 'low' );
+	add_meta_box( 'page_options', __( 'InterTheme Page Options', 'inter_theme' ), 'inter_page_meta_box_build', array('page', 'post'), 'normal', 'low' );
 }
 
 add_action( 'add_meta_boxes', 'inter_add_page_meta_boxes' );
@@ -49,51 +49,51 @@ function inter_page_meta_box_build( $post ){
 	// retrieve the _cholesterol current value
 	$current_bottom_padding = get_post_meta( $post->ID, '_bottom_padding', true ); ?>
 
-	<div class='inside'>
+	<div class='inside inter-page-options'>
 
-		<p><?php _e( 'Show Header?', 'inter_theme' ); ?></p>
+		<p class="inter-page-options__header"><?php _e( 'Show Header?', 'inter_theme' ); ?></p>
 		<p>
 			<input type="radio" name="show_header" value="0" <?php checked( $current_show_header, '0' ); ?> /> No 
 			<input type="radio" name="show_header" value="1" <?php checked( $current_show_header, '1' ); ?> /> Yes
 		</p>
 		<hr>
-		<p><?php _e( 'Show Title?', 'inter_theme' ); ?></p>
+		<p class="inter-page-options__header"><?php _e( 'Show Title?', 'inter_theme' ); ?></p>
 		<p>
 			<input type="radio" name="show_title" value="0" <?php checked( $current_show_title, '0' ); ?> /> No 
 			<input type="radio" name="show_title" value="1" <?php checked( $current_show_title, '1' ); ?> /> Yes
 		</p>
 		<hr>
-		<p><?php _e( 'Show Breadcrumbs?', 'inter_theme' ); ?></p>
+		<p class="inter-page-options__header"><?php _e( 'Show Breadcrumbs?', 'inter_theme' ); ?></p>
 		<p>
 			<input type="radio" name="show_breadcrumbs" value="0" <?php checked( $current_show_breadcrumbs, '0' ); ?> /> No 
 			<input type="radio" name="show_breadcrumbs" value="1" <?php checked( $current_show_breadcrumbs, '1' ); ?> /> Yes
 		</p>
 		<hr>
-		<p><?php _e( 'Show Featured Image?', 'inter_theme' ); ?></p>
+		<p class="inter-page-options__header"><?php _e( 'Show Featured Image?', 'inter_theme' ); ?></p>
 		<p>
 			<input type="radio" name="show_featured_image" value="0" <?php checked( $current_show_featured_image, '0' ); ?> /> No 
 			<input type="radio" name="show_featured_image" value="1" <?php checked( $current_show_featured_image, '1' ); ?> /> Yes
 		</p>
 		<hr>
-		<p><?php _e( 'Page Layout', 'inter_theme' ); ?></p>
+		<p class="inter-page-options__header"><?php _e( 'Page Layout', 'inter_theme' ); ?></p>
 		<p>
 			<input type="radio" name="page_layout" value="boxed" <?php checked( $current_page_layout, 'boxed' ); ?> /> Boxed 
 			<input type="radio" name="page_layout" value="full-width" <?php checked( $current_page_layout, 'full-width' ); ?> /> Full Width
 		</p>
 		<hr>
-		<p><?php _e( 'Show Sidebar?', 'inter_theme' ); ?></p>
+		<p class="inter-page-options__header"><?php _e( 'Show Sidebar?', 'inter_theme' ); ?></p>
 		<p>
 			<input type="radio" name="show_sidebar" value="0" <?php checked( $current_show_sidebar, '0' ); ?> /> No 
 			<input type="radio" name="show_sidebar" value="1" <?php checked( $current_show_sidebar, '1' ); ?> /> Yes
 		</p>
 		<hr>
-		<p><?php _e( 'Sidebar position', 'inter_theme' ); ?></p>
+		<p class="inter-page-options__header"><?php _e( 'Sidebar position', 'inter_theme' ); ?></p>
 		<p>
 			<input type="radio" name="sidebar_position" value="left" <?php checked( $current_sidebar_position, 'left' ); ?> /> Left 
 			<input type="radio" name="sidebar_position" value="right" <?php checked( $current_sidebar_position, 'right' ); ?> /> Right
 		</p>
 		<hr>
-		<p><?php _e( 'Page Padding', 'inter_theme' ); ?></p>
+		<p class="inter-page-options__header"><?php _e( 'Page Padding', 'inter_theme' ); ?></p>
 		<p>
 			<input <?php if( $current_top_padding != "" ): ?>value="<?php echo $current_top_padding; ?>"<?php endif; ?> type="text" name="top_padding" placeholder="<?php _e('Top Padding (in px)', 'inter_theme')?>" ><br/><br/>
 			<input <?php if( $current_bottom_padding != "" ): ?>value="<?php echo $current_bottom_padding; ?>"<?php endif; ?> type="text" name="bottom_padding" placeholder="<?php _e('Bottom Padding (in px)', 'inter_theme')?>" >

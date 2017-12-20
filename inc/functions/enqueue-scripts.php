@@ -9,7 +9,7 @@
  * @param string|bool $ver (optional) Script version (used for cache busting), set to null to disable
  * @param bool $in_footer (optional) Whether to enqueue the script before </head> or before </body>
  */
-function inter_name_scripts() {
+function inter_scripts() {
 
 	$css_dir = get_stylesheet_directory_uri() . '/assets/css/';
 	$js_dir = get_stylesheet_directory_uri() . '/assets/js/';
@@ -32,8 +32,17 @@ function inter_name_scripts() {
 
 	wp_enqueue_script( 'bootstrap-js', $js_dir.'bootstrap.min.js', array('jquery'), false, false );
 
-	// wp_enqueue_script( 'fontawesome-5', '//use.fontawesome.com/releases/v5.0.1/css/all.css', array('jquery'), false, false );
-
 }
 
-add_action( 'wp_enqueue_scripts', 'inter_name_scripts', '11' ); ?>
+add_action( 'wp_enqueue_scripts', 'inter_scripts', '11' );
+
+function inter_admin_style(){
+	
+	$css_dir = get_stylesheet_directory_uri() . '/assets/css/';
+	
+	wp_enqueue_style( 'theme-admin', $css_dir.'theme-admin.css', array(), false, false );
+}
+
+add_action('admin_head', 'inter_admin_style');
+
+?>

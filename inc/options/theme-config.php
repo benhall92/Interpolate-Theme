@@ -1520,7 +1520,7 @@
                 )
             ),
             array(
-                'id'            => 'topbar-navigation',
+                'id'            => 'typography-topbar',
                 'type'          => 'typography',
                 'title'         => __( 'Top bar', 'redux-framework-demo' ),
                 'subtitle'      => __( 'Specify the Top bar font properties.', 'redux-framework-demo' ),
@@ -1545,6 +1545,24 @@
                 'google'        => true,
                 'output'        => array( '#footer p, #footer a, #footer li, #copyright' ),
                 'line-height'   => true,
+                'text-align'    => false,
+                'units'         => 'rem',
+                'default'       => array(
+                    'color'       => '#000000',
+                    'font-size'   => '1rem',
+                    'font-family' => 'Arial, Helvetica, sans-serif',
+                    'font-weight' => 'Normal',
+                ),
+            ),
+            array(
+                'id'            => 'typography-footer',
+                'type'          => 'typography',
+                'title'         => __( 'Breadcrumb Font', 'redux-framework-demo' ),
+                'subtitle'      => __( 'Specify the Breadcrumb font properties.', 'redux-framework-demo' ),
+                'google'        => true,
+                'output'        => array( '#breadcrumbs li, #breadcrumbs li a, #breadcrumbs li:before' ),
+                'line-height'   => true,
+                'color'         => false,
                 'text-align'    => false,
                 'units'         => 'rem',
                 'default'       => array(
