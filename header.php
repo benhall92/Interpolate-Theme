@@ -161,20 +161,22 @@ $showSearchIconMobile = $inter_options['show-search-icon-mobile']; ?>
 
 	</div>
 
-</nav>
+	<?php if ($showSearchIconMobile == 'yes'): ?>
+	<div class="mobile-search">
 
-<div class="mobile-search">
+		<div class="container">
 
-	<div class="container">
+			<div class="row">
 
-		<div class="row">
-
-			<div class="col">
-				<?php get_search_form(); ?>
+				<div class="col">
+					<?php get_search_form(); ?>
+				</div>
+					
 			</div>
-				
-		</div>
 
+		</div>
+		
 	</div>
-	
-</div>
+	<?php endif; ?>
+
+</nav>

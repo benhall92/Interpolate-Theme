@@ -1555,7 +1555,7 @@
                 ),
             ),
             array(
-                'id'            => 'typography-footer',
+                'id'            => 'typography-breadcrumb',
                 'type'          => 'typography',
                 'title'         => __( 'Breadcrumb Font', 'redux-framework-demo' ),
                 'subtitle'      => __( 'Specify the Breadcrumb font properties.', 'redux-framework-demo' ),
@@ -1702,6 +1702,8 @@
                 'type'     => 'border',
                 'title'    => __( 'Primary Button Border', 'redux-framework-demo' ),
                 'output'   => array( '.btn-primary, .btn-primary:hover, .woocommerce button.single_add_to_cart_button.button, .woocommerce a.button, .woocommerce a.button:hover, #commentform input[type="submit"]' ),
+                'radius_enabled' => true,
+                'all'      => false,
                 'default'  => array(
                     'border-color'  => '#c42d2d',
                     'border-style'  => 'solid',
@@ -1747,6 +1749,7 @@
                 'type'     => 'border',
                 'title'    => __( 'Secondary Button Border', 'redux-framework-demo' ),
                 'output'   => array( '.btn-secondary, .btn-secondary:hover #sidebar button, #sidebar input[type="submit"]' ),
+                'all'      => false,
                 'default'  => array(
                     'border-color'  => '#e4e4e4',
                     'border-style'  => 'solid',

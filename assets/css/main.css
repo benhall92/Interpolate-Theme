@@ -51,6 +51,18 @@ body{
 	display: none;
 }
 
+	.mobile-search input[type="text"],
+	.mobile-search button[type="submit"]{
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		-o-border-radius: 0px;
+		border-radius: 0px;
+	}
+
+	.mobile-search button[type="submit"]{
+		line-height: 1.3;
+	}
+
 @media screen and (max-width: 991px){
 
 	.breadcrumb{
@@ -61,6 +73,7 @@ body{
 
 	.mobile-search.is--open{
 		display: block;
+		width: 100%;
 	}
 }
 
