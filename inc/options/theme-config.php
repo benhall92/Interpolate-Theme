@@ -74,8 +74,8 @@
         //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
         'allow_sub_menu'       => true,
         // Show the sections below the admin menu item or not
-        'menu_title'           => __( 'Theme Options', 'redux-framework-demo' ),
-        'page_title'           => __( 'Theme Options', 'redux-framework-demo' ),
+        'menu_title'           => __( 'InterTheme Options', 'redux-framework-demo' ),
+        'page_title'           => __( 'InterTheme Options', 'redux-framework-demo' ),
         // You will need to generate a Google API key to use this feature.
         // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
         'google_api_key'       => '',
@@ -448,7 +448,7 @@
                 'subtitle' => __( 'Set the background colour of the Top Bar button.', 'redux-framework-demo' ),
                 'output' => array('.top-bar'),
                 'default'  => array(
-                    'color' => '#000000',
+                    'color' => '#8b1f1f',
                     'alpha' => '1'
                 ),
                 'mode'     => 'background',
@@ -555,7 +555,7 @@
                 'units'         => 'rem',
                 'required' => array('use-nav-logo', 'equals', 'no'),
                 'default'       => array(
-                    'color'       => '#000000',
+                    'color'       => '#c42d2d',
                     'font-size'   => '1rem',
                     'font-family' => 'Montserrat',
                     'font-weight' => 'Normal',
@@ -1368,8 +1368,8 @@
                 'default'       => array(
                     'color'       => '#000000',
                     'font-size'   => '1rem',
-                    'font-family' => 'Arial, Helvetica, sans-serif',
-                    'font-weight' => 'Normal',
+                    'font-family' => 'Open Sans',
+                    'font-weight' => '300',
                 ),
             ),
             array(
@@ -1387,9 +1387,9 @@
                 'font-style'    => false,
                 'units'         => 'rem',
                 'default'       => array(
-                    'color'       => '#000000',
+                    'color'       => '#c42d2d',
                     'font-size'   => '1rem',
-                    'font-family' => 'Arial, Helvetica, sans-serif',
+                    'font-family' => 'Open Sans',
                     'font-weight' => 'Normal',
                 ),
             ),
@@ -1405,9 +1405,9 @@
                 'units'         => 'rem',
                 'text-transform' => true,
                 'default'       => array(
-                    'color'       => '#000000',
+                    'color'       => '#000',
                     'font-size'   => '2.5rem',
-                    'font-family' => 'Arial, Helvetica, sans-serif',
+                    'font-family' => "PT Serif",
                     'font-weight' => 'Normal',
                 )
             ),
@@ -1423,9 +1423,9 @@
                 'units'         => 'rem',
                 'text-transform' => true,
                 'default'       => array(
-                    'color'       => '#000000',
+                    'color'       => '#c42d2d',
                     'font-size'   => '2rem',
-                    'font-family' => 'Arial, Helvetica, sans-serif',
+                    'font-family' => "PT Serif",
                     'font-weight' => 'Normal',
                 )
             ),
@@ -1443,7 +1443,7 @@
                 'default'       => array(
                     'color'       => '#000000',
                     'font-size'   => '1.75rem',
-                    'font-family' => 'Arial, Helvetica, sans-serif',
+                    'font-family' => "PT Serif",
                     'font-weight' => 'Normal',
                 )
             ),
@@ -1461,7 +1461,7 @@
                 'default'       => array(
                     'color'       => '#000000',
                     'font-size'   => '1.5rem',
-                    'font-family' => 'Arial, Helvetica, sans-serif',
+                    'font-family' => "PT Serif",
                     'font-weight' => 'Normal',
                 )
             ),
@@ -1479,7 +1479,7 @@
                 'default'       => array(
                     'color'       => '#000000',
                     'font-size'   => '1.25rem',
-                    'font-family' => 'Arial, Helvetica, sans-serif',
+                    'font-family' => "PT Serif",
                     'font-weight' => 'Normal',
                 )
             ),
@@ -1497,7 +1497,7 @@
                 'default'       => array(
                     'color'       => '#000000',
                     'font-size'   => '1rem',
-                    'font-family' => 'Arial, Helvetica, sans-serif',
+                    'font-family' => "PT Serif",
                     'font-weight' => 'Normal',
                 )
             ),
@@ -1515,7 +1515,7 @@
                 'text-transform' => true,
                 'default'       => array(
                     'font-size'   => '1rem',
-                    'font-family' => 'Arial, Helvetica, sans-serif',
+                    'font-family' => "PT Serif",
                     'font-weight' => 'Normal',
                 )
             ),
@@ -1533,7 +1533,7 @@
                 'text-transform' => true,
                 'default'       => array(
                     'font-size'   => '1rem',
-                    'font-family' => 'Arial, Helvetica, sans-serif',
+                    'font-family' => 'Open Sans',
                     'font-weight' => 'Normal',
                 )
             ),
@@ -1550,7 +1550,7 @@
                 'default'       => array(
                     'color'       => '#000000',
                     'font-size'   => '1rem',
-                    'font-family' => 'Arial, Helvetica, sans-serif',
+                    'font-family' => "PT Serif",
                     'font-weight' => 'Normal',
                 ),
             ),
@@ -1568,7 +1568,7 @@
                 'default'       => array(
                     'color'       => '#000000',
                     'font-size'   => '1rem',
-                    'font-family' => 'Arial, Helvetica, sans-serif',
+                    'font-family' => 'Open Sans',
                     'font-weight' => 'Normal',
                 ),
             ),
@@ -1586,7 +1586,7 @@
                 'default'       => array(
                     'color'       => '#FFFFFF',
                     'font-size'   => '1rem',
-                    'font-family' => 'Arial, Helvetica, sans-serif',
+                    'font-family' => "PT Serif",
                     'font-weight' => 'Normal',
                 )
             ),
@@ -1604,7 +1604,7 @@
                 'default'       => array(
                     'color'       => '#FFFFFF',
                     'font-size'   => '1rem',
-                    'font-family' => 'Arial, Helvetica, sans-serif',
+                    'font-family' => "PT Serif",
                     'font-weight' => 'Normal',
                 )
             )

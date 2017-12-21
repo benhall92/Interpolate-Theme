@@ -127,6 +127,11 @@ body{
 		margin-right: 1rem;
 	}
 
+		.navbar .navbar-nav .sub-menu{
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
 		.navbar .navbar-nav.ml-auto .sub-menu{ text-align: right; }
 
 		.navbar .navbar-nav.mr-auto .sub-menu{ text-align: left; }
