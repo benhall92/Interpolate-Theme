@@ -542,6 +542,8 @@ body{
 
 	.card .card-footer{ font-size: 12px; }
 
+.pagination li{ padding: 0 5px; }
+
 
 /*------------------------------------*\
 	$SINGLE POST

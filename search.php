@@ -14,7 +14,11 @@ $posts_per_row 		= $inter_options['search-posts-per-row'];
 
 $col = '';
 
-if( $posts_per_row == '2' ){
+if( $posts_per_row == '1' ){
+
+	$col = 'col-lg-12 col-md-12 col-sm-12 mb-4';
+
+}elseif( $posts_per_row == '2' ){
 
 	$col = 'col col-lg-6 col-md-6 col-sm-12';
 
@@ -124,7 +128,7 @@ if ($show_header == 'yes'): ?>
 						<h4 class="card-title"><?php the_title(); ?></h4>
 						<p class="card-text"><?php the_excerpt(); ?></p>
 
-						<a href="<?php the_permalink(); ?>" class="btn btn-primary"><?php _e('View Article', 'inter_theme'); ?></a>
+						<a href="<?php the_permalink(); ?>" class="btn btn-primary"><?php _e('View '. get_post_type(), 'inter_theme'); ?></a>
 					</div>
 
 					<div class="card-footer text-muted">

@@ -1319,6 +1319,7 @@
                 'subtitle' => __( 'How many posts should be shown per row?', 'redux-framework-demo' ),
                 //Must provide key => value pairs for select options
                 'options'  => array(
+                    '1' => '1',
                     '2' => '2',
                     '3' => '3',
                     '4' => '4'
@@ -1365,6 +1366,26 @@
                 'line-height'   => true,
                 'text-align'    => false,
                 'units'         => 'rem',
+                'default'       => array(
+                    'color'       => '#000000',
+                    'font-size'   => '1rem',
+                    'font-family' => 'Open Sans',
+                    'font-weight' => '300',
+                ),
+            ),
+            array(
+                'id'            => 'typography-body-strong',
+                'type'          => 'typography',
+                'title'         => __( 'Body Font - Bold', 'redux-framework-demo' ),
+                'subtitle'      => __( 'Specify the Bold Body font properties.', 'redux-framework-demo' ),
+                'google'        => true,
+                'output'        => array( 'p strong, .p strong, li strong, .li strong, th strong, td strong, dt strong, strong' ),
+                'line-height'   => false,
+                'text-align'    => false,
+                'units'         => 'false',
+                'font-size'     => false,
+                'color'         => false,
+                'subsets'       => false,
                 'default'       => array(
                     'color'       => '#000000',
                     'font-size'   => '1rem',
@@ -1578,7 +1599,7 @@
                 'title'         => __( 'Primary Button', 'redux-framework-demo' ),
                 'subtitle'      => __( 'Specify the Primary Button font properties.', 'redux-framework-demo' ),
                 'google'        => true,
-                'output'        => array( '.btn-primary, .btn-primary:hover, .woocommerce button.single_add_to_cart_button.button, .woocommerce a.button, .woocommerce a.button:hover' ),
+                'output'        => array( '.btn-primary, .btn-primary:hover, .woocommerce button.single_add_to_cart_button.button, .woocommerce a.button, .woocommerce a.button:hover, #commentform input[type="submit"]' ),
                 'line-height'   => true,
                 'text-align'    => false,
                 'units'         => 'rem',
