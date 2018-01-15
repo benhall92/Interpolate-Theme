@@ -112,6 +112,22 @@ $showSearchIconMobile = $inter_options['show-search-icon-mobile']; ?>
 		</div>
 	<?php endif; ?>
 
+	<?php
+	/**
+	 * Check if WooCommerce is active
+	 **/
+	if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ): ?>
+
+	<div id="mobileCart" class="header-mobile-button d-block d-sm-block d-md-block d-lg-none">
+
+		<a class="cart-contents" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>">
+	  		<i class="fas fa-shopping-cart"></i> (<?php echo WC()->cart->get_cart_contents_count(); ?>)
+	  	</a>
+
+	</div>
+
+	<?php endif ?>
+
 	<?php if ($showSearchIconMobile == 'yes'): ?>
 
 	<button id="mobileSearchToggle" class="header-mobile-button d-block d-sm-block d-md-block d-lg-none">
@@ -120,7 +136,7 @@ $showSearchIconMobile = $inter_options['show-search-icon-mobile']; ?>
 
 	<?php endif ?>
   	
-  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  	<button id="navbarToggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     	<i class="fa fa-bars"></i>
 	</button>
 
@@ -133,6 +149,21 @@ $showSearchIconMobile = $inter_options['show-search-icon-mobile']; ?>
 	  			'menu_class' => 'navbar-nav '.$nav_align
 	  		)
 	  	); ?>
+
+		<?php
+		/**
+		 * Check if WooCommerce is active
+		 **/
+		if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ): ?>
+
+		<div class="d-none d-sm-none d-md-none d-lg-inline">
+
+			<a class="cart-contents" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>">
+		  		<i class="fas fa-shopping-cart"></i> (<?php echo WC()->cart->get_cart_contents_count(); ?>)
+		  	</a>
+
+	  	</div>
+	  	<?php endif; ?>
 
 		<?php if ($inter_options['show-search-bar-in-nav'] == 'yes'): ?>
 	  	<div class="my-2 my-lg-0">

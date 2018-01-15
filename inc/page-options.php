@@ -7,7 +7,7 @@
  */
 function inter_add_page_meta_boxes( $post ){
 
-	add_meta_box( 'page_options', __( 'Page Options', 'inter_theme' ), 'inter_page_meta_box_build', array('page', 'post'), 'normal', 'low' );
+	add_meta_box( 'page_options', __( 'Page Options', 'inter_theme' ), 'inter_page_meta_box_build', array('page', 'post', 'product'), 'normal', 'low' );
 }
 
 add_action( 'add_meta_boxes', 'inter_add_page_meta_boxes' );

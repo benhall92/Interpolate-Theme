@@ -1350,6 +1350,256 @@
         )
     ) );
 
+    if ( class_exists( 'WooCommerce' ) ):
+
+    Redux::setSection( $opt_name, array(
+        'title'      => __( 'Woocommerce', 'redux-framework-demo' ),
+        'id'         => 'woocommerce-settings',
+        'desc'       => __( 'Shop Page settings.', 'redux-framework-demo'),
+        'icon'       => 'el el-shopping-cart',
+    ) );
+
+    Redux::setSection( $opt_name, array(
+        'title'      => __( 'Shop Page', 'redux-framework-demo' ),
+        'id'         => 'woocommerce-shop',
+        'desc'       => __( 'Shop Page settings.', 'redux-framework-demo'),
+        'icon'       => 'el el-shopping-cart',
+        'subsection' => true,
+        'fields'     => array(
+            array(
+                'id'       => 'shop-layout',
+                'type'     => 'select',
+                'title'    => __( 'Choose a boxed layout or Full Width layout for the Shop page.', 'redux-framework-demo' ),
+                //Must provide key => value pairs for select options
+                'options'  => array(
+                    'boxed' => 'Boxed',
+                    'full-width' => 'Full Width'
+                ),
+                'default'  => 'boxed'
+            ),
+            array(
+                'id'       => 'shop-background-colour',
+                'type'     => 'color_rgba',
+                'title'    => __( 'Shop Page Background colour', 'redux-framework-demo' ),
+                'output'   => array('.archive.woocommerce main.page-main'),
+                'default'  => array(
+                    'color' => '#EFEFEF',
+                    'alpha' => '1'
+                ),
+                'mode'     => 'background',
+            ),
+            array(
+                'id'       => 'shop-show-sidebar',
+                'type'     => 'select',
+                'title'    => __( 'Show Sidebar?', 'redux-framework-demo' ),
+                'subtitle' => __( 'Show the sidebar on the shop page?', 'redux-framework-demo' ),
+                //Must provide key => value pairs for select options
+                'options'  => array(
+                    'yes' => 'Yes',
+                    'no' => 'No'
+                ),
+                'default'  => 'yes'
+            ),
+            array(
+                'id'       => 'shop-sidebar-position',
+                'type'     => 'select',
+                'title'    => __( 'Sidebar Position?', 'redux-framework-demo' ),
+                'subtitle' => __( 'Choose the sidebar position.', 'redux-framework-demo' ),
+                //Must provide key => value pairs for select options
+                'options'  => array(
+                    'left' => 'Left',
+                    'right' => 'Right'
+                ),
+                'default'  => 'left'
+            ),
+            array(
+                'id'       => 'shop-show-header',
+                'type'     => 'select',
+                'title'    => __( 'Show Header?', 'redux-framework-demo' ),
+                'subtitle' => __( 'Show the header on the shop page?', 'redux-framework-demo' ),
+                //Must provide key => value pairs for select options
+                'options'  => array(
+                    'yes' => 'Yes',
+                    'no' => 'No'
+                ),
+                'default'  => 'yes'
+            ),
+            array(
+                'id'       => 'shop-show-title',
+                'type'     => 'select',
+                'title'    => __( 'Show Title in Header?', 'redux-framework-demo' ),
+                'subtitle' => __( 'Show the title in the header on the archive page?', 'redux-framework-demo' ),
+                //Must provide key => value pairs for select options
+                'options'  => array(
+                    'yes' => 'Yes',
+                    'no' => 'No'
+                ),
+                'default'  => 'yes'
+            ),
+            array(
+                'id'       => 'shop-show-breadcrumbs',
+                'type'     => 'select',
+                'title'    => __( 'Show Breadcrumbs in Header?', 'redux-framework-demo' ),
+                'subtitle' => __( 'Show the breadcrumbs in the header on the archive page?', 'redux-framework-demo' ),
+                //Must provide key => value pairs for select options
+                'options'  => array(
+                    'yes' => 'Yes',
+                    'no' => 'No'
+                ),
+                'default'  => 'yes'
+            ),
+            array(
+                'id'       => 'shop-posts-per-row',
+                'type'     => 'select',
+                'title'    => __( 'Posts per row', 'redux-framework-demo' ),
+                'subtitle' => __( 'How many posts should be shown per row?', 'redux-framework-demo' ),
+                //Must provide key => value pairs for select options
+                'options'  => array(
+                    '2' => '2',
+                    '3' => '3',
+                    '4' => '4'
+                ),
+                'default'  => '3'
+            ),
+            array(
+                'id'       => 'shop-spacing',
+                'type'     => 'spacing',
+                'output'   => array( '.archive.woocommerce main.page-main, #archive' ),
+                // An array of CSS selectors to apply this font style to
+                'mode'     => 'padding',
+                // absolute, padding, margin, defaults to padding
+                'all'      => false,
+                'units'    => 'px',
+                // Have one field that applies to all
+                'right'         => false,     // Disable the right
+                'left'          => false,     // Disable the left
+                'top'           => true,     // Disable the left
+                'bottom'        => true,     // Disable the left
+                'title'    => __( 'Padding Option', 'redux-framework-demo' ),
+                'subtitle' => __( 'Choose how much spacing should be applied to the top and bottom of the page.', 'redux-framework-demo' ),
+                'default'  => array(
+                    'padding-top'    => '30px',
+                    'padding-bottom' => '30px'
+                )
+            ),
+        )
+    ) );
+
+    Redux::setSection( $opt_name, array(
+        'title'      => __( 'Product Page', 'redux-framework-demo' ),
+        'id'         => 'woocommerce-product',
+        'desc'       => __( 'Product Page settings.', 'redux-framework-demo'),
+        'icon'       => 'el el-shopping-cart',
+        'subsection' => true,
+        'fields'     => array(
+            array(
+                'id'       => 'product-layout',
+                'type'     => 'select',
+                'title'    => __( 'Choose a boxed layout or Full Width layout for the Product page.', 'redux-framework-demo' ),
+                //Must provide key => value pairs for select options
+                'options'  => array(
+                    'boxed' => 'Boxed',
+                    'full-width' => 'Full Width'
+                ),
+                'default'  => 'boxed'
+            ),
+            array(
+                'id'       => 'product-background-colour',
+                'type'     => 'color_rgba',
+                'title'    => __( 'Product Page Background colour', 'redux-framework-demo' ),
+                'output'   => array('.woocommerce main.page-main#single'),
+                'default'  => array(
+                    'color' => '#EFEFEF',
+                    'alpha' => '1'
+                ),
+                'mode'     => 'background',
+            ),
+            array(
+                'id'       => 'product-show-sidebar',
+                'type'     => 'select',
+                'title'    => __( 'Show Sidebar?', 'redux-framework-demo' ),
+                'subtitle' => __( 'Show the sidebar on the product page?', 'redux-framework-demo' ),
+                //Must provide key => value pairs for select options
+                'options'  => array(
+                    'yes' => 'Yes',
+                    'no' => 'No'
+                ),
+                'default'  => 'yes'
+            ),
+            array(
+                'id'       => 'product-sidebar-position',
+                'type'     => 'select',
+                'title'    => __( 'Sidebar Position?', 'redux-framework-demo' ),
+                'subtitle' => __( 'Choose the sidebar position.', 'redux-framework-demo' ),
+                //Must provide key => value pairs for select options
+                'options'  => array(
+                    'left' => 'Left',
+                    'right' => 'Right'
+                ),
+                'default'  => 'left'
+            ),
+            array(
+                'id'       => 'product-show-header',
+                'type'     => 'select',
+                'title'    => __( 'Show Header?', 'redux-framework-demo' ),
+                'subtitle' => __( 'Show the header on the product page?', 'redux-framework-demo' ),
+                //Must provide key => value pairs for select options
+                'options'  => array(
+                    'yes' => 'Yes',
+                    'no' => 'No'
+                ),
+                'default'  => 'yes'
+            ),
+            array(
+                'id'       => 'product-show-title',
+                'type'     => 'select',
+                'title'    => __( 'Show Title in Header?', 'redux-framework-demo' ),
+                'subtitle' => __( 'Show the title in the header on the product page?', 'redux-framework-demo' ),
+                //Must provide key => value pairs for select options
+                'options'  => array(
+                    'yes' => 'Yes',
+                    'no' => 'No'
+                ),
+                'default'  => 'yes'
+            ),
+            array(
+                'id'       => 'product-show-breadcrumbs',
+                'type'     => 'select',
+                'title'    => __( 'Show Breadcrumbs in Header?', 'redux-framework-demo' ),
+                'subtitle' => __( 'Show the breadcrumbs in the header on the product page?', 'redux-framework-demo' ),
+                //Must provide key => value pairs for select options
+                'options'  => array(
+                    'yes' => 'Yes',
+                    'no' => 'No'
+                ),
+                'default'  => 'yes'
+            ),
+            array(
+                'id'       => 'product-spacing',
+                'type'     => 'spacing',
+                'output'   => array( '.woocommerce main.page-main#single' ),
+                // An array of CSS selectors to apply this font style to
+                'mode'     => 'padding',
+                // absolute, padding, margin, defaults to padding
+                'all'      => false,
+                'units'    => 'px',
+                // Have one field that applies to all
+                'right'         => false,     // Disable the right
+                'left'          => false,     // Disable the left
+                'top'           => true,     // Disable the left
+                'bottom'        => true,     // Disable the left
+                'title'    => __( 'Padding Option', 'redux-framework-demo' ),
+                'subtitle' => __( 'Choose how much spacing should be applied to the top and bottom of the page.', 'redux-framework-demo' ),
+                'default'  => array(
+                    'padding-top'    => '30px',
+                    'padding-bottom' => '30px'
+                )
+            ),
+        )
+    ) );
+
+    endif;
+
     // -> START Typography
     Redux::setSection( $opt_name, array(
         'title'  => __( 'Typography', 'redux-framework-demo' ),
@@ -1581,7 +1831,7 @@
                 'title'         => __( 'Breadcrumb Font', 'redux-framework-demo' ),
                 'subtitle'      => __( 'Specify the Breadcrumb font properties.', 'redux-framework-demo' ),
                 'google'        => true,
-                'output'        => array( '#breadcrumbs li, #breadcrumbs li a, #breadcrumbs li:before' ),
+                'output'        => array( '#breadcrumbs li, #breadcrumbs li a, #breadcrumbs li:before, .woocommerce-breadcrumb, .woocommerce-breadcrumb a, .woocommerce-breadcrumb a:before' ),
                 'line-height'   => true,
                 'color'         => false,
                 'text-align'    => false,
@@ -1599,7 +1849,7 @@
                 'title'         => __( 'Primary Button', 'redux-framework-demo' ),
                 'subtitle'      => __( 'Specify the Primary Button font properties.', 'redux-framework-demo' ),
                 'google'        => true,
-                'output'        => array( '.btn-primary, .btn-primary:hover, .woocommerce button.single_add_to_cart_button.button, .woocommerce a.button, .woocommerce a.button:hover, #commentform input[type="submit"]' ),
+                'output'        => array( '.btn-primary, .btn-primary:hover, .woocommerce button.single_add_to_cart_button.button, .woocommerce a.button, .woocommerce a.button:hover, #commentform input[type="submit"], .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover' ),
                 'line-height'   => true,
                 'text-align'    => false,
                 'units'         => 'rem',
@@ -1700,7 +1950,7 @@
                 'id'       => 'primary-btn-background-colour',
                 'type'     => 'color_rgba',
                 'title'    => __( 'Primary Button Background colour', 'redux-framework-demo' ),
-                'output'   => array('.btn-primary, .btn-primary:hover, .woocommerce button.single_add_to_cart_button.button, .woocommerce a.button, .woocommerce a.button:hover, #commentform input[type="submit"]'),
+                'output'   => array('.btn-primary, .btn-primary:hover, .woocommerce button.single_add_to_cart_button.button, .woocommerce button.single_add_to_cart_button.button:hover, .woocommerce a.button, .woocommerce a.button:hover, #commentform input[type="submit"], .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover'),
                 'default'  => array(
                     'color' => '#c42d2d',
                     'alpha' => '1'
@@ -1711,7 +1961,7 @@
                 'id'       => 'primary-btn-font-colour',
                 'type'     => 'color_rgba',
                 'title'    => __( 'Primary Button Font colour', 'redux-framework-demo' ),
-                'output'   => array('.btn-primary, .btn-primary:hover, .woocommerce button.single_add_to_cart_button.button, .woocommerce a.button, .woocommerce a.button:hover, #commentform input[type="submit"]'),
+                'output'   => array('.btn-primary, .btn-primary:hover, .woocommerce button.single_add_to_cart_button.button, .woocommerce button.single_add_to_cart_button.button:hover .woocommerce a.button, .woocommerce a.button:hover, #commentform input[type="submit"], .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover'),
                 'default'  => array(
                     'color' => '#FFFFFF',
                     'alpha' => '1'
@@ -1722,7 +1972,7 @@
                 'id'       => 'primary-btn-border',
                 'type'     => 'border',
                 'title'    => __( 'Primary Button Border', 'redux-framework-demo' ),
-                'output'   => array( '.btn-primary, .btn-primary:hover, .woocommerce button.single_add_to_cart_button.button, .woocommerce a.button, .woocommerce a.button:hover, #commentform input[type="submit"]' ),
+                'output'   => array( '.btn-primary, .btn-primary:hover, .woocommerce button.single_add_to_cart_button.button, .woocommerce button.single_add_to_cart_button.button:hover, .woocommerce a.button, .woocommerce a.button:hover, #commentform input[type="submit"], .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover' ),
                 'radius_enabled' => true,
                 'all'      => false,
                 'default'  => array(

@@ -9,7 +9,7 @@ function inter_breadcrumbs() {
     $home_title         = 'Homepage';
       
     // If you have any custom post types with custom taxonomies, put the taxonomy name below (e.g. product_cat)
-    $custom_taxonomy    = 'product_cat';
+    $custom_taxonomy    = '';
        
     // Get the query & post information
     global $post,$wp_query;
