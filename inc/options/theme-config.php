@@ -1849,7 +1849,7 @@
                 'title'         => __( 'Primary Button', 'redux-framework-demo' ),
                 'subtitle'      => __( 'Specify the Primary Button font properties.', 'redux-framework-demo' ),
                 'google'        => true,
-                'output'        => array( '.btn-primary, .btn-primary:hover, .woocommerce button.single_add_to_cart_button.button, .woocommerce a.button, .woocommerce a.button:hover, #commentform input[type="submit"], .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover' ),
+                'output'        => array( '.btn-primary, .btn-primary:hover, .woocommerce button.single_add_to_cart_button.button, .woocommerce a.button, .woocommerce a.button:hover, #commentform input[type="submit"], .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover, .woocommerce #place_order, .woocommerce #place_order:hover, .woocommerce-MyAccount-downloads-file, .woocommerce-MyAccount-downloads-file:hover' ),
                 'line-height'   => true,
                 'text-align'    => false,
                 'units'         => 'rem',
@@ -1867,7 +1867,7 @@
                 'title'         => __( 'Secondary Button', 'redux-framework-demo' ),
                 'subtitle'      => __( 'Specify the Secondary Button font properties.', 'redux-framework-demo' ),
                 'google'        => true,
-                'output'        => array( '.btn-secondary, .btn-secondary:hover' ),
+                'output'        => array( '.btn-secondary, .btn-secondary:hover, .woocommerce a.button.alt, .woocommerce a.button.alt:hover' ),
                 'line-height'   => true,
                 'text-align'    => false,
                 'units'         => 'rem',
@@ -1950,7 +1950,7 @@
                 'id'       => 'primary-btn-background-colour',
                 'type'     => 'color_rgba',
                 'title'    => __( 'Primary Button Background colour', 'redux-framework-demo' ),
-                'output'   => array('.btn-primary, .btn-primary:hover, .woocommerce button.single_add_to_cart_button.button, .woocommerce button.single_add_to_cart_button.button:hover, .woocommerce a.button, .woocommerce a.button:hover, #commentform input[type="submit"], .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover'),
+                'output'   => array('.btn-primary, .btn-primary:hover, .woocommerce button.single_add_to_cart_button.button, .woocommerce button.single_add_to_cart_button.button:hover, .woocommerce a.button, .woocommerce a.button:hover, #commentform input[type="submit"], .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover, .woocommerce #place_order, .woocommerce #place_order:hover, .woocommerce-MyAccount-downloads-file, .woocommerce-MyAccount-downloads-file:hover:hover'),
                 'default'  => array(
                     'color' => '#c42d2d',
                     'alpha' => '1'
@@ -1961,7 +1961,7 @@
                 'id'       => 'primary-btn-font-colour',
                 'type'     => 'color_rgba',
                 'title'    => __( 'Primary Button Font colour', 'redux-framework-demo' ),
-                'output'   => array('.btn-primary, .btn-primary:hover, .woocommerce button.single_add_to_cart_button.button, .woocommerce button.single_add_to_cart_button.button:hover .woocommerce a.button, .woocommerce a.button:hover, #commentform input[type="submit"], .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover'),
+                'output'   => array('.btn-primary, .btn-primary:hover, .woocommerce button.single_add_to_cart_button.button, .woocommerce button.single_add_to_cart_button.button:hover .woocommerce a.button, .woocommerce a.button:hover, #commentform input[type="submit"], .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover, .woocommerce #place_order, .woocommerce #place_order:hover, .woocommerce-MyAccount-downloads-file, .woocommerce-MyAccount-downloads-file:hover'),
                 'default'  => array(
                     'color' => '#FFFFFF',
                     'alpha' => '1'
@@ -1972,7 +1972,7 @@
                 'id'       => 'primary-btn-border',
                 'type'     => 'border',
                 'title'    => __( 'Primary Button Border', 'redux-framework-demo' ),
-                'output'   => array( '.btn-primary, .btn-primary:hover, .woocommerce button.single_add_to_cart_button.button, .woocommerce button.single_add_to_cart_button.button:hover, .woocommerce a.button, .woocommerce a.button:hover, #commentform input[type="submit"], .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover' ),
+                'output'   => array( '.btn-primary, .btn-primary:hover, .woocommerce button.single_add_to_cart_button.button, .woocommerce button.single_add_to_cart_button.button:hover, .woocommerce a.button, .woocommerce a.button:hover, #commentform input[type="submit"], .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover, .woocommerce #place_order, .woocommerce #place_order:hover, .woocommerce-MyAccount-downloads-file, .woocommerce-MyAccount-downloads-file:hover' ),
                 'radius_enabled' => true,
                 'all'      => false,
                 'default'  => array(
@@ -1997,7 +1997,7 @@
                 'id'       => 'secondary-btn-background-colour',
                 'type'     => 'color_rgba',
                 'title'    => __( 'Secondary Button Background colour', 'redux-framework-demo' ),
-                'output'   => array('.btn-secondary, .btn-secondary:hover, #sidebar button, #sidebar input[type="submit"], .single-post-tags .badge'),
+                'output'   => array('.btn-secondary, .btn-secondary:hover, #sidebar button, #sidebar input[type="submit"], .single-post-tags .badge,.woocommerce a.button.alt, .woocommerce a.button.alt:hover'),
                 'default'  => array(
                     'color' => '#e4e4e4',
                     'alpha' => '1'
@@ -2008,7 +2008,7 @@
                 'id'       => 'secondary-btn-font-colour',
                 'type'     => 'color_rgba',
                 'title'    => __( 'Secondary Button Font colour', 'redux-framework-demo' ),
-                'output'   => array('.btn-secondary, .btn-secondary:hover #sidebar button, #sidebar input[type="submit"], .single-post-tags .badge'),
+                'output'   => array('.btn-secondary, .btn-secondary:hover #sidebar button, #sidebar input[type="submit"], .single-post-tags .badge,.woocommerce a.button.alt, .woocommerce a.button.alt:hover'),
                 'default'  => array(
                     'color' => '#000000',
                     'alpha' => '1'
@@ -2019,7 +2019,7 @@
                 'id'       => 'secondary-btn-border',
                 'type'     => 'border',
                 'title'    => __( 'Secondary Button Border', 'redux-framework-demo' ),
-                'output'   => array( '.btn-secondary, .btn-secondary:hover #sidebar button, #sidebar input[type="submit"]' ),
+                'output'   => array( '.btn-secondary, .btn-secondary:hover #sidebar button, #sidebar input[type="submit"],.woocommerce a.button.alt, .woocommerce a.button.alt:hover' ),
                 'all'      => false,
                 'default'  => array(
                     'border-color'  => '#e4e4e4',

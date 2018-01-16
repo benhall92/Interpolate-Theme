@@ -497,6 +497,7 @@ body{
 
 .woocommerce button.single_add_to_cart_button.button:hover,
 .woocommerce a.button:hover,
+.woocommerce #place_order:hover,
 .btn-primary:hover,
 .btn-secondary:hover{
 	border-color: inherit;
