@@ -615,6 +615,14 @@ body{
 .price > ins,
 .price > ins > span{ color: #8b1f1f; }
 
+.woocommerce form input[type="text"],
+.woocommerce form input[type="email"],
+.woocommerce form input[type="password"],
+.woocommerce form input[type="tel"],
+.woocommerce form input[type="number"]{
+	padding: .5rem .75rem;
+}
+
 @media screen and (max-width: 768px){
 
 	.woocommerce #products-4 ul.products li.product, .woocommerce-page ul.products li.product,
