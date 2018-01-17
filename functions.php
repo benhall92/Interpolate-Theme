@@ -309,7 +309,7 @@ require 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	'https://github.com/benhall92/Interpolate-Theme',
 	__FILE__,
-	'Interpolate-Theme'
+	'inter_theme'
 );
 
 //Optional: If you're using a private repository, specify the access token like this:
