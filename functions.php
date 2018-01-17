@@ -316,4 +316,4 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 // $myUpdateChecker->setAuthentication('your-token-here');
 
 //Optional: Set the branch that contains the stable release.
-// $myUpdateChecker->setBranch('master');
+$myUpdateChecker->setBranch('master');
