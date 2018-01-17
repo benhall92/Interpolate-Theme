@@ -303,3 +303,17 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 	endif;
 
 endif;
+
+require 'plugin-update-checker/plugin-update-checker.php';
+
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/benhall92/Interpolate-Theme',
+	__FILE__,
+	'Interpolate-Theme'
+);
+
+//Optional: If you're using a private repository, specify the access token like this:
+// $myUpdateChecker->setAuthentication('your-token-here');
+
+//Optional: Set the branch that contains the stable release.
+// $myUpdateChecker->setBranch('master');

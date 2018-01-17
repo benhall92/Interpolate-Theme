@@ -611,6 +611,24 @@ body{
 	width: 48.1%;
 }
 
+.woocommerce.single-product .summary .price{
+	font-size: 2em;
+	font-weight: bold;
+}
+
+	.woocommerce.single-product .summary .price del{
+		font-size: 50%;
+		color: #000;
+	}
+
+	.woocommerce.single-product .summary .price ins{ color: #c42d2d; }
+
+		.woocommerce.single-product .summary .price del > span,
+		.woocommerce.single-product .summary .price ins > span{
+			color: inherit;
+			font-size: inherit;
+		}
+
 .price > ins{ text-decoration: none; }
 
 .price > ins,
