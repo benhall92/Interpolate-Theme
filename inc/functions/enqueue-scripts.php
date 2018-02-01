@@ -30,7 +30,7 @@ function inter_scripts() {
 
 	wp_enqueue_script( 'font-awesome', '//use.fontawesome.com/releases/v5.0.4/js/all.js', array(), null );
 	// required from upgrade from v4 to v5
-	wp_enqueue_script( 'font-awesome', '//use.fontawesome.com/releases/v5.0.4/js/v4-shims.js', array(), null );
+	wp_enqueue_script( 'font-awesome-shim', '//use.fontawesome.com/releases/v5.0.4/js/v4-shims.js', array(), null );
 
 	wp_enqueue_script( 'theme', $js_dir.'theme.js', array('jquery'), false, true );
 
