@@ -32,9 +32,13 @@ function inter_scripts() {
 	// required from upgrade from v4 to v5
 	wp_enqueue_script( 'font-awesome-shim', '//use.fontawesome.com/releases/v5.0.4/js/v4-shims.js', array(), null );
 
-	wp_enqueue_script( 'theme', $js_dir.'theme.js', array('jquery'), false, true );
+	
 
 	wp_enqueue_script( 'bootstrap-js', $js_dir.'bootstrap.min.js', array('jquery'), false, false );
+
+	wp_enqueue_script( 'popper-js', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', array('jquery'), false, true );
+
+	wp_enqueue_script( 'theme', $js_dir.'theme.js', array('jquery'), false, true );
 }
 
 add_action( 'wp_enqueue_scripts', 'inter_scripts', '11' );
