@@ -6,7 +6,7 @@ function inter_breadcrumbs() {
     $separator          = '&gt;';
     $breadcrums_id      = 'breadcrumbs';
     $breadcrums_class   = 'breadcrumb';
-    $home_title         = 'Homepage';
+    $home_title         = 'Home';
       
     // If you have any custom post types with custom taxonomies, put the taxonomy name below (e.g. product_cat)
     $custom_taxonomy    = '';

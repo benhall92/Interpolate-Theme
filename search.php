@@ -125,7 +125,7 @@ if ($show_header == 'yes'): ?>
 					
 					<div class="card-body">
 						
-						<h4 class="card-title"><?php the_title(); ?></h4>
+						<h5 class="card-title"><?php the_title(); ?></h5>
 						<p class="card-text"><?php the_excerpt(); ?></p>
 
 						<a href="<?php the_permalink(); ?>" class="btn btn-primary"><?php _e('View '. get_post_type(), 'inter_theme'); ?></a>

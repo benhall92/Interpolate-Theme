@@ -34,7 +34,7 @@ body{
     background: 0 0;
 }
 
-	.heaer-mobile-button:first-of-type{ margin-left: auto; }
+	.hedaer-mobile-button:first-of-type{ margin-left: auto; }
 
 .breadcrumb, .woocommerce-breadcrumb{
 	text-align: right;
@@ -159,7 +159,7 @@ body{
 		.navbar .navbar-nav.mr-auto .sub-menu{ text-align: left; }
  
 	.navbar .header-cta{
-		margin: 0 0 0 10px;
+		margin: 0 0 15px 0;
 	}
 
 	.navbar .social-list{
@@ -234,6 +234,13 @@ body{
 		text-transform: inherit;
 	}
 
+@media screen and (max-width: 575px){
+	
+	.navbar-brand{ max-width: 50%; }
+
+		.navbar-brand img{ width: 100%; }
+}
+
 
 @media screen and (max-width: 991px){
 
@@ -270,9 +277,46 @@ body{
 	}
 }
 
+@media screen and (min-width: 992px){
+
+	.navbar .header-cta{
+		margin: 0 0 0 10px;
+	}
+
+}
+
 /*------------------------------------*\
 	$POST
 \*------------------------------------*/
+
+.rte img{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.rte .alignleft{
+	float: left;
+	padding-right: 10px;
+}
+
+.rte .alignright{
+	float: right;
+	padding-left: 10px;
+}
+
+.rte .aligncenter{
+	display: block;
+	margin: 0 auto;
+}
+
+.single-post-info .svg-inline--fa{
+	font-size: 0.65em;
+	vertical-align: baseline;
+}
+
+.single-post-info .svg-inline--fa.fa-calendar-alt{
+	margin-left: 20px;
+}
 
 .post-featured-image{
 	

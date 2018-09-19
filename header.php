@@ -89,11 +89,8 @@ $showSearchIconMobile = $inter_options['show-search-icon-mobile']; ?>
 <nav id="topNavBar" class="navbar <?php if ($inter_options['sticky-nav'] == 'yes'): ?>sticky-top<?php endif ?> navbar-expand-lg navbar-light">
 
 
-	<?php if( is_front_page() ): ?>
-		<h1 class="navbar-brand" itemscope itemtype="http://schema.org/Organization">
-    <?php else: ?>
-		<div class="navbar-brand" itemscope itemtype="http://schema.org/Organization">
-    <?php endif; ?>
+	<div class="navbar-brand" itemscope itemtype="http://schema.org/Organization">
+
     	<?php if ( $use_header_logo == 'no' ): ?>
     		<a class="navbar-brand-text" href="<?php echo get_home_url(); ?>">
     			<?php echo get_bloginfo('name'); ?>
@@ -106,11 +103,8 @@ $showSearchIconMobile = $inter_options['show-search-icon-mobile']; ?>
 	          <img style="max-width: <?php echo $logo_max_width; ?>;" src="<?php echo $nav_logo['url']; ?>" title="<?php echo get_bloginfo('name'); ?> | <?php echo get_bloginfo('description'); ?>" alt="<?php echo get_bloginfo('name'); ?> | <?php echo get_bloginfo('description'); ?>" itemprop="logo">
 	        </a>
       	<?php endif; ?>
-   	<?php if( is_front_page() ): ?>
-		</h1>
-	<?php else: ?>
-		</div>
-	<?php endif; ?>
+
+	</div>
 
 	<?php
 	/**
@@ -174,11 +168,11 @@ $showSearchIconMobile = $inter_options['show-search-icon-mobile']; ?>
 		<?php endif ?>
 
 		<?php if ($inter_options['show-cta-in-nav'] == 'yes'): ?>
-		<div class="nav pull-right header-cta">
+		<div class="nav float-lg-right header-cta">
 		<?php if ($cta_link != ''): ?>
       	<a href="<?php echo $cta_link; ?>">
       	<?php endif ?>
-			<button id="navBarCTA" type="button" class="btn btn-primary navbar-btn">
+			<button id="navBarCTA" type="button" role="button" class="btn btn-primary navbar-btn">
 				<?php if ($cta_icon != ""): ?>
 				<i class="<?php echo $cta_icon; ?>"></i>
 				<?php endif ?>
